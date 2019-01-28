@@ -1,0 +1,40 @@
+* Movies
+
+
+| *Genre*   | *Title*                                | *Tags* |
+|-----------+----------------------------------------+--------|
+| Horror    | The Excorcism of Emily Rose            | /TODO/ |
+| Horror    | Beautiful Creatures                    | *DONE* |
+| Horror    | Fido                                   | /TODO/ |
+| Horror    | It Follows                             | *DONE* |
+| Horror    | We are still here                      | *DONE* |
+| Horror    | Misery                                 | *DONE* |
+| Horror    | Dawn of the Dead                       | *DONE* |
+| Horror    | Better Watch Out                       | /TODO/ |
+| Animation | The Land Before Time (Complete Series) | /TODO/ |
+| Animation | Tangled                                | *DONE* |
+| Adventure | Thelma and Louise                      | *DONE* |
+| Adventure | indiana jones (complete series)        | /TODO/ |
+| Adventure | cast away                              | /TODO/ |
+| Sci-Fi    | Exisitenz                              | *DONE* |
+| Sci-Fi    | The congress (2014)                    | *DONE* |
+| Sci-Fi    | Dark City                              | *DONE* |
+| Sci-Fi    | The Matrix series                      | *DONE* |
+| Sci-Fi    | Gattaca                                | *DONE* |
+| Sci-Fi    | Paprika                                | *DONE* |
+| Sci-Fi    | Total Reacall                          | *DONE* |
+| Sci-Fi    | They Live                              | *DONE* |
+| Sci-Fi    | The Man Who Fell To Earth              | *DONE* |
+| Sci-Fi    | Super 8                                | *DONE* |
+| Sci-Fi    | 12 Monkeys                             | *DONE* |
+| Sci-Fi    | City of Lost Children                  | /TODO/ |
+
+
+
+* T.V.
+
+|----+---------------+--------|
+| TV | Secret Circle | *DONE* |
+| TV | CHAOS         | /TODO/ |
+|----+---------------+--------|
+

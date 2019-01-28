@@ -1,0 +1,210 @@
+* My base emacs config
+
+Hey, how's it going? Yep, it's another of those "my emacs setup" articles! Joy right? Well let's get on with it then. Firstly, I decided that I liked to keep my imports, and my configuration seperate, for maintainability mostly. Given that, let's dive right in, with a look at the base directory layout:
+
+<pre>
+~/.emacs.d/
+-- init.el
+-- lisp/
+-- local/
+</pre>
+
+Starting with our ~/.emacs.d/init.el we have to do some basic setup. Stuff like our list of "layers" (to borrow a term from the [[https://spacemacs.org][Spacemacs]] peeps) to activate, our list of package-archives, and our helper utilities. We'll start with something like this:
+
+#+BEGIN_SRC lisp
+;; Here you can configure the options you want to enable
+(setq thwap/layers '("base"
+                     "rss"))
+(require 'package)
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpy" . "https://jorgenschaefer.github.io/packages/")
+                         ("marmalade" . "http://marmalade.ferrier.me.uk")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(package-initialize t)
+#+END_SRC
+
+Now obviously this doesn't do a whole lot, so let's start adding in our utility functions. We'll start with a function we've named "thwap/package-installs". Ever since finding out that "/" could be used in function namespaces in eLisp, I've loved that as a convention. It makes things nice and readable in my opinion. So walking through thwap/package-installs we see that it takes a list as an argument, and iterates through it. Each item in that list, which is presumably a package name, will then be installed (at least it will be attempted), if it isn't already. Pretty simple logic, but handy.
+
+#+BEGIN_SRC lisp
+;; Utilities:
+(defun thwap/package-installs (package-list)
+       ;; fetch the list of packages available
+       (unless package-archive-contents
+         (package-refresh-contents))
+       ;; install the missing packages
+       (dolist (package package-list)
+         (unless (package-installed-p package)
+           (package-install package))))
+#+END_SRC
+
+The next thing we've got to unpack, is a simple bit of logic that activates each layer, and a tiny bit that goes through our list of active layers, and activates them. Simple and straight forward, and it will define the layer setup requirements which we'll go over in the next bit as we start adding simple layers to our setup.
+
+#+BEGIN_SRC lisp
+(defun thwap/activate (name)
+  "Activate the named module."
+  (load (concat (concat "~/.emacs.d/local/" name) "/imports.el"))
+  (thwap/package-installs package-list)
+  (load (concat (concat "~/.emacs.d/local/" name) "/config.el")))
+
+(dolist (x thwap/layers)
+  (thwap/activate x))
+#+END_SRC
+
+Now we're pretty much ready to begin, there is some general customization stuff that I do past here, a small sample of which is below. I don't think anyone cares what my little custom-set-variables block is like so I'm just giving some bare bones generic bits here. You do you baby.
+
+#+BEGIN_SRC lisp
+;; some basic stuff, your mileage may vary
+(custom-set-variables
+  '(global-linum-mode t)
+  '(global-visual-line-mode t)
+  '(inhibit-startup-screen t)
+  '(tab-width 2)
+  '(menu-bar-mode t))
+#+END_SRC
+
+We'll stop here, and explain what we're trying to setup. First the directory layout, the lisp/ directory will hold lisp modules to load that don't have an installable candidate in the package repositories we have configured. Next the local/ directory is where we'll configure our layers. Then we have some functions to facilitate loading each of our layers. Each of the layers consist of a directory, named for the layer, and containing at least 2 files: imports.el and config.el. The imports.el is generally speaking rather simple. The only required content is creating a list of packages to ensure are installed. The layout for our "base" layer would look like this:
+
+<pre>
+~/.emacs.d/
+-- init.el
+-- lisp/
+-- local/
+   -- base/
+      -- imports.el
+      -- config.el
+</pre>
+
+*** "base" layer
+
+*NOTE*: The versions were semi-current at the time of this writing:
+
+| Name            |       Version | Home                                           |
+|-----------------+---------------+------------------------------------------------|
+| neotree         | 20181121.2026 | [[https://github.com/jaypei/emacs-neotree]]        |
+| yasnippet       | 20181015.1212 | [[https://github.com/joaotavora/yasnippet]]        |
+| better-defaults |  20170614.404 | [[https://github.com/technomancy/better-defaults]] |
+
+<br \/>
+So our local/base/imports.el at a minimum, would look something like this:
+
+#+BEGIN_SRC lisp
+(setq package-list '(better-defaults
+                     neotree
+                     yasnippet))
+#+END_SRC
+
+Let's examine that for a quick second, it will be quick I promise. I mean, there isn't a whole lot to digest. Now obviously you can put any code in here that you need, but at bare min, you need to have at least that list declaration.
+
+The config.el is generally where I put all of the non-package-list code for each layer. You can setup all of the packages you import for the layer there easily enough. So our local/base/config.el would look a bit like this:
+
+#+BEGIN_SRC lisp
+;; Set our base keyboard prefix
+(define-prefix-command 'thwap-map)
+(global-set-key (kbd "C-t") 'thwap-map)
+;; load our defaults
+(require 'better-defaults)
+;; setup yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
+;; and neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+#+END_SRC
+
+*** "rss" layer
+
+*NOTE*: The versions were semi-current at the time of this writing:
+
+| Name       |       Version | Home                                    |
+|------------+---------------+-----------------------------------------|
+| Elfeed     | 20181127.1943 | [[https://github.com/skeeto/elfeed]]        |
+| Elfeed-org | 20181015.1100 | [[https://github.com/remyhonig/elfeed-org]] |
+
+<br \/>
+Our rss layer gets a bit more complex. We add a new file to our ~/.emacs.d/ directory. To start with let's look at our imports.el:
+
+#+BEGIN_SRC lisp
+(setq package-list '(elfeed
+                     elfeed-org))
+#+END_SRC
+
+Our config.el defines some keybindings, using our "thwap-map" key prefix (C-t in case you forgot), and sets up elfeed-org so we can use the awesome org-mode to manage our elfeed configurations. Elfeed isn't difficult to configure, but believe me, elfeed-org still makes it easier.
+
+#+BEGIN_SRC lisp
+;; setup elfeed keybindings
+(define-key thwap-map (kbd "r s") 'elfeed)
+(define-key thwap-map (kbd "r u") 'elfeed-update)
+(define-key thwap-map (kbd "r a") 'elfeed-add-feed)
+(define-key thwap-map (kbd "r d") 'elfeed-kill-buffer)
+(define-key thwap-map (kbd "r f") 'elfeed-search-live-filter)
+;; setup elfeed-org
+(require 'elfeed-org)
+(elfeed-org)
+(setq rmh-elfeed-org-files (list "~/.emacs.d/elfeed.org"))
+#+END_SRC
+
+This of course let's use use *C-t r s* to start our news reader, *C-t r u* to update our feeds, *C-t r f* to filter, and so on. Honestly I find those are about the only three keybindings I use from this layer. Once elfeed-org got added, managing feeds became a lot simpler. To that effect let's get started managing those feeds! Let's start editing our ~/.emacs.d/elfeed.org, mine looks a bit like this:
+
+#+BEGIN_SRC org
+* blogs                                                                  :elfeed:
+** daily                                                                   :daily:
+*** http://telescoper.wordpress.com/feed/
+*** http://xkcd.com/rss.xml
+*** http://timharford.com/feed/
+*** http://understandinguncertainty.org/rss.xml
+*** https://www.smbc-comics.com/comic/rss
+*** https://www.penny-arcade.com/feed
+*** http://goats.com/feed/
+
+** emacs                                                                  :emacs:
+*** http://www.reddit.com/r/emacs/.rss
+*** http://planet.emacsen.org/atom.xml
+*** http://feeds.feedburner.com/XahsEmacsBlog
+*** http://pragmaticemacs.com/feed/
+*** http://emacs.stackexchange.com/feeds
+
+** Development                                                            :devel:
+*** Python                                                               :python:
+**** https://planetpython.org/rss20.xml                              
+**** http://lucumr.pocoo.org/feed.atom                               
+**** http://www.blog.pythonlibrary.org/feed/                         
+**** https://doughellmann.com/blog/feed/                             
+**** http://feeds.feedburner.com/LifeIsShort-YouNeedPython?format=xml
+***                                                                      :golang:
+**** https://golang.ch/feed/                                         
+**** https://appliedgo.net/index.xml                                 
+**** https://changelog.com/gotime/feed                               
+**** https://dave.cheney.net/category/golang/feed                    
+**** https://blog.golang.org/feed.atom                               
+**** https://golangcode.com/index.xml                                
+**** https://blog.learngoprogramming.com/feed                        
+
+** Workflow                                                            :workflow:
+*** Project management                                                       :pm:
+**** https://www.scrum.org/resources/blog/rss.xml                        
+**** http://www.scrum-breakfast.com/feeds/posts/default?alt=rss          
+**** http://feeds.dzone.com/agile                                        
+**** https://www.projectmanagement.com/RSS/projectmanagement.xml         
+**** https://www.mountaingoatsoftware.com/blog/rss                       
+*** Devops                                                               :devops:
+**** http://feeds.dzone.com/devops                                   
+
+* News                                                                     :news:
+** World                                                                   :world:
+*** http://feeds.bbci.co.uk/news/world/rss.xml                   
+*** https://news.google.com/?hl=en-US&gl=US&ceid=US:en&output=rss
+
+** Technology                                                              :tech:
+*** https://www.kernel.org/feeds/all.atom.xml
+*** https://www.freebsd.org/news/rss.xml     
+*** http://www.osnews.com/files/recent.xml   
+*** http://rss.slashdot.org/Slashdot/slashdotMain
+*** https://www.techdirt.com/techdirt_rss.xml   
+*** https://news.ycombinator.com/rss            
+*** https://techcrunch.com/feed/                
+#+END_SRC
+
+* Signing off
+
+Starting from there you can see how you can easily drop in new "layers" and keep everything nice and clean. I'll continue next time with setting up a GoLang development environment and Emacs features for fun and profit.

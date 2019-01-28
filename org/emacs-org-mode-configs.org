@@ -1,0 +1,13 @@
+* Org-mode configuration
+
+When we left off in part #01 of our series, we had defined a framework for adding "layers" to our configuration. As well, we had defined two layers, a "base" and a "rss" layer, and setup the configurations. I'm assuming you have read the first part of the series, so I'm going to continue building on that base config that we built.
+
+In this article we'll be setting up our base org-mode configuration, some extras and things to make org even nicer than it already is. Which is honestly saying something. We'll begin by adding a directory, "mkdir -p ~/.emacs.d/local/org" should do that just fine if you're on a UNIX or UNIX-like system. Our imports.el file inside would look like:
+
+#+BEGIN_SRC lisp
+(setq package-list '(org-plus-contrib
+                     org-bullets
+                     org-beautify-theme
+                     org-pomodoro))
+#+END_SRC
+

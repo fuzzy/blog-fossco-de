@@ -1,0 +1,11 @@
+*** What you'll find here
+
+Little rants and ramblings about the stuff I play with. Should be a smattering of [[https://www.gnu.org/software/emacs][Emacs]], [[https://golang.org][Golang]], and [[https://www.python.org][Python]] articles, with some fun DevOps type stuff thrown in every now and then. I'll try my best not to get into much in the way of politics, except where issues affect technology.
+
+*** Maybe a little encouragement
+
+****** TODO Write up a full description of Emacs configuration
+****** TODO Write up an installation and usage guide for GoOrgEous George
+****** TODO Write up an installation and usage guide for TranSwarm
+****** TODO Document SaltStack configurations for controlling Docker Swarms and Kubernetes
+
