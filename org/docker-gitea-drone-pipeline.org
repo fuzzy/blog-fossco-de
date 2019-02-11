@@ -215,8 +215,14 @@ There are several options available
 I'm going with [[https://gitea.io][GiTea]] as it's quite easy to deploy, has growing community support, and it's nice, fast, and written in Go. I'll admit to being a bit of a Go nut. Let's get that deployed. First our choices, I use SQLite for the database, since I have persistent storage, and not alot of users so simply mounting a /data is sufficient.
 
 #+BEGIN_SRC sh
-$ docker service create --network services --name git --label traefik.port=3000 --mount type=bind,src=/srv/git,dst=/data --label traefik.enable=true gitea/gitea
+$ sudo docker service create --network services --name git --label traefik.port=3000 --mount type=bind,src=/srv/git,dst=/data --label traefik.enable=true gitea/gitea
 #+END_SRC
+
+Now we can login, and setup our admin user, etc. I won't cover going over that as there is plenty of upstream documentation covering that.
+
+**** /NOTE/ If you're building this pipeline on an arm/arm64 cluster
+
+Gitea doesn't seem to have arm/arm64 support in their docker image, so you are left with 2 options if you want this product or the most similar you can get. First you can pull the source and build GiTea and it's docker image yourself, it's not difficult. Your other option is to switch over to Gogs which has arm images, your mileage may vary with regards to arm64.
 
 *** Continuous integration
 
