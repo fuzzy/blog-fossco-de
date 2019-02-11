@@ -8,22 +8,23 @@ I may repost some other articles here from outside sources from time to time. I 
 
 *** Org-Mode configurations
 
-****** TODO [[https://blog.fossco.de/org/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 2)*
-****** TODO Org-mode publishing with GoOrgEous George *(Part 3)*
+****** TODO [[/org/emacs-magit.org.org][Magit integration]] *(Part 2)*
+****** [[https://blog.fossco.de/org/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 3)*
+****** TODO Org-mode publishing with GoOrgEous George *(Part 4)*
 
 *** Development configurations
 
-****** TODO Python development with Emacs *(Part 4)*
-****** TODO Golang development with Emacs *(Part 5)*
+****** TODO Python development with Emacs *(Part 5)*
+****** TODO Golang development with Emacs *(Part 6)*
 
 *** DevOps configurations
 
-****** TODO Ansible development *(Part 6)*
-****** TODO Working with Docker containers *(Part 7)*
-****** TODO Working with SaltStack *(Part 8)*
+****** TODO Ansible development *(Part 7)*
+****** TODO Working with Docker containers *(Part 8)*
+****** TODO Working with SaltStack *(Part 9)*
 
 *** Diagraming with Emacs
 
-****** TODO Generating diagrams with org-mindmap *(Part 9)*
-****** TODO Generating more complex diagrams with ditaa and artist-mode *(Part 10)*
-****** TODO Generating complex and flashy diagrams with PlantUML and org-mode *(Part 11)*
+****** TODO Generating diagrams with org-mindmap *(Part 10)*
+****** TODO Generating more complex diagrams with ditaa and artist-mode *(Part 11)*
+****** TODO Generating complex and flashy diagrams with PlantUML and org-mode *(Part 12)*
