@@ -41,3 +41,4 @@ Pretty straight-forward. I don't think that going over each item in that list wi
 #+END_SRC
 
 
+Here we just require our libraries, using mostly stock functionality for the moment. The org-babel-load-languages list gives us a good starting place for being able to use the literate devops capabilities as well as graphing and other fun stuff. I know, I know. This article isn't very long or exciting. But that's ok, we will be re-visiting Org-Mode later on as we describe our workflow for "Agile" project management.
