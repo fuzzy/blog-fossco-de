@@ -4,11 +4,11 @@ I may repost some other articles here from outside sources from time to time. I 
 
 *** General configurations
 
-****** [[/org/emacs-base-config.org.org][Base Emacs configuration]] *(Part 1)*
+****** [[https://blog.fossco.de/org/emacs-base-config.org.org][Base Emacs configuration]] *(Part 1)*
 
 *** Org-Mode configurations
 
-****** TODO [[/org/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 2)*
+****** TODO [[https://blog.fossco.de/org/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 2)*
 ****** TODO Org-mode publishing with GoOrgEous George *(Part 3)*
 
 *** Development configurations

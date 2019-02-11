@@ -1,0 +1,228 @@
+* Assumptions
+
+1. You have a spare Linux box. (armhf, aarch64, amd64 and some powerpc versions are supported by docker, YMMV)
+2. You have Debian or Ubuntu installed on said spare Linux box (any distribution should work so long as docker is packaged up, assuming the official sources don't support you)
+3. You can publicly expose ports 80 and 443 at a minimum, you may want another port for SSH
+
+* Define our working environment.
+
+*** Hardware
+
+Whatever spare hardware you have lying around is fine usually. I have setup swarms with ODROID-HC1 machines, also with Rock64 SBCs as well as with more commodity type x86-based hardware, as we'll detail below.
+
+- Master: 4x3Ghz cores, 8GB RAM, 2TB SSD space (NFS shared to the other nodes, more on that later)
+- Worker: 4x2.5Ghz cores, 8GB RAM
+- Worker: 2.2.5Ghz cores, 8GB RAM
+
+*** Operating System
+
+There are many choices one could make here. Some of them better than others, depending on who you ask. I personally have no serious show-stopper issues with Debian or Ubuntu, and as those are arguably the most common distributions, I'll be going that route.
+
+- Master and all worker nodes are running [[https://www.debian.org][Debian GNU/Linux]] stretch with all updates applied as of: Wed Feb  6 07:47:37 PST 2019
+
+*** Software
+
+This is the sticky wicket, versions of popular projects can move extremely quickly. Given that volitile nature, you can experience wildly different results from those seen here if the versions don't line up. To help guard against that possibility I'm listing the versions of the software used in this writing for comparison if you have to track down any issues.
+
+- Docker 18.09.1-ce
+- Gitea
+- Drone-CI
+
+* Installing our base
+
+*** Docker
+
+I use the following little shell script to handle the docker installation
+
+#+BEGIN_SRC sh
+#!/bin/sh
+
+case "${USER}" in
+  (root) 
+    SUDO="" ;;
+  (*)
+    SUDO="$(which sudo)" ;;
+esac
+
+case "$(uname -m)" in
+  (arm*)
+    ARCH=armhf ;;
+  (aarch64)
+    ARCH=arm64 ;;
+  (x86_64)
+    ARCH=amd64 ;;
+  (*)
+    ARCH=amd64 ;;
+esac
+
+${SUDO} apt remove docker docker-engine docker.io runc
+${SUDO} apt update && ${SUDO} apt upgrade -y
+${SUDO} apt install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
+${SUDO} curl -fsSL https://download.docker.com/linux/debian/gpg | ${SUDO} apt-key add -
+APT_LINE="deb [arch=${ARCH}] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+echo ${APT_LINE} | ${SUDO} tee /etc/apt/sources.list.d/docker.list
+${SUDO} apt update && ${SUDO} apt install -y docker-ce
+#+END_SRC
+
+Note this works for Debian, but won't do you much good for systems like ArchLinux. Most systems that aren't supported by the upstream will have packages though, so not to worry. Arch, Alpine, Gentoo etc all have either binary packages available, or the tools to build your own.
+
+*** Swarm-mode clustering
+
+On our primary node we need to setup our cluster master. Docker has made this quite simple:
+
+#+BEGIN_SRC sh
+$ sudo docker swarm init
+#+END_SRC
+
+After running this you will see some output similar to:
+
+#+BEGIN_SRC txt
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-36you72bjisxnx0hvt1z3nyzhph7oprtb8e2n0qxpzt3izb337-ast013o8sii0erqecsmtsrza9 192.168.2.20:2377
+#+END_SRC
+
+Copy this command down, as you will need it on all of our workers. Adding a worker to the node is as simple as logging into the worker host, and running the command seen above. If you want to setup multi-master swarm-mode, you can get a manager join token by running the following command on the master:
+
+#+BEGIN_SRC sh
+$ sudo docker swarm join-token manager
+To add a manager to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-36you72bjisxnx0hvt1z3nyzhph7oprtb8e2n0qxpzt3izb337-9cq4yjr3d7047jqq45tcqxzwr 192.168.2.20:2377
+#+END_SRC
+
+*** Shared filesystems
+
+You can use whatever shared filesystem makes sense for your environment, I personally didn't care to spend a ton of time on it since filesystem performance isn't critical in my setup, so I chose NFS which is perfectly workable under a wide variety of workloads (but by no means all). Giving a quick moment to discussing some of the options however can't hurt. GlusterFS is a very workable option, as well one could use AFS, or any of the various shared-filesystems. If you need performance you may consider a heavy client-caching system. For me, NFS does the job well enough I really only have a maximum of 4 users to support on my services, so it's not that big a deal.
+
+So let's get started setting up NFS, it's quite painless and quick. Come to think of it, that may be one of the main reasons I chose it....
+
+#+BEGIN_SRC sh
+$ sudo apt update && sudo apt install nfs-common nfs-kernel-server
+$ echo '/srv 192.168.2.2*(rw,no_root_squash)' | sudo tee -a /etc/exports
+$ sudo systemctl restart nfs-server
+#+END_SRC
+
+We're using /srv as our main point on the master node, so we must use that on the worker nodes as well. Let's set that up, on each node we can run the following:
+
+#+BEGIN_SRC sh
+$ echo '192.168.2.20:/srv /srv nfs defaults,noatime,nodiratime 1 2' | sudo tee -a /etc/fstab
+$ sudo apt update && sudo apt install nfs-common
+$ sudo mount /srv
+#+END_SRC
+
+Of course any mount flag tuning you may want to use can be, the options here are kind of a bare minimum for NFS not sucking your will to live. 
+
+*** Traffic routing
+
+Yes I know this is a service running as a container, and isn't technically part of the cluster proper. However, it's function is so important that I feel it should be considered as cluster infrastructure. I mean, it does provide the piece of the puzzle that docker doesn't...yet.
+
+To start with, we'll want to create a "proxy" network, mine is called "services" as I found it to be a bit more descriptive
+
+#+BEGIN_SRC sh
+$ sudo docker network create --driver=overlay services
+132467890ABCDEF # <- obviously fake return ID
+#+END_SRC
+
+Next we'll want to setup our traffic router. I use [[https://traefik.io][traefik]] and that's what I'll be covering. I know where are other ways to handle this. You could handle some automation around [[https://nginx.org][nginx]], [[https://www.apache.org][apache]], [[https://varnish-cache.org][varnish]], and the list goes on, but I like the way traefik works with the docker swarm, so there ya go.
+
+Let's start configuring traefik now, start by creating the config/data directories:
+
+#+BEGIN_SRC sh
+$ sudo mkdir -p /srv/traefik/acme
+#+END_SRC
+
+Next let's create the password for the HTTP(s)/auth on the traefik dashboard.
+
+#+BEGIN_SRC sh
+$ htpasswd -n admin
+New password: 
+Re-type new password: 
+admin:$apr1$P.eh9l0e$9uE3AnTl3F/wHrdQbNYzK0
+#+END_SRC
+
+We can now use that in our *[web]* section to keep alot of unwanted looky-loos out of there.
+
+#+BEGIN_SRC toml
+defaultEntryPoints = ["http", "https"]
+
+[web]
+# Port for the status page
+address = ":8080"
+  [web.auth.basic]
+  users = ["admin:$apr1$P.eh9l0e$9uE3AnTl3F/wHrdQbNYzK0"]
+
+# Entrypoints, http and https
+[entryPoints]
+  # http should be redirected to https
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  # https is the default
+  [entryPoints.https]
+  address = ":443"
+    [entryPoints.https.tls]
+
+# Enable ACME (Let's Encrypt): automatic SSL
+[acme]
+# Email address used for registration
+email = "user@domain.tld" # <- fix this
+storageFile = "/etc/traefik/acme/acme.json"
+entryPoint = "https"
+onDemand = false
+OnHostRule = true
+[acme.httpChallenge]
+entryPoint = "http"
+
+# Enable Docker configuration backend
+[docker]
+swarmmode = true
+endpoint = "unix:///var/run/docker.sock"
+domain = "example.com"
+watch = true
+network = "services"
+exposedbydefault = false
+#+END_SRC
+
+Section by section, we can see our entrypoints get defined, and we setup http->https redirection by default. Turn this off if you like, but I don't recommend that, traefik can handle putting valid certs in place for everything (which we'll cover next). 
+
+The *[acme]* section details our configuration for interaction with LetsEncrypt, the acme.json file will be created automatically so don't worry about that part. The easiest method of validation is 'http' in my opinion, and assuming all of your DNS entries are valid this should be a breeze to setup.
+
+A note about the acme setup, is that the traefik service needs to be publically accessible. This is so it can setup an http path for LetsEncrypt to hit to validate domains before issuing your (*free and valid*) ssl cert. I have exposed ports 80, 443, and 2223 in my example to work with our development pipeline and other web services.
+
+Finally we come to the *[docker]* section, which is pretty straight-forward. We see that swarmmode is enabled, setup our socket file and domain. Next we tell traefik to watch for new containers being created, specifically on our new network we created earlier. Finally we turn off the exposedbydefault feature because I often will deploy containers that I wish to test or use internally and don't wish them to be exposed to the internet if it can be avoided. And as luck would have it, it can be avoided. To expose a container we simply apply the label 'traefik.enabled=true' to the container. Bingo-bango-bongo, Bob's your uncle.
+
+Deploying traefik is pretty straightforward as well, there is a library "fat" manifest for the image on https://hub.docker.com/ which supports armhf and arm64, so this should be pretty universal.
+
+#+BEGIN_SRC sh
+$ sudo docker service create --network services --name proxy --constraint=node.role==manager --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock --mount=type=bind,src=/srv/traefik,dst=/etc/traefik --label traefik.port=8080 --label traefik.enable=true -p 80:80 -p 443:443 traefik
+#+END_SRC
+
+* Development pipeline
+
+*** Repository hosting
+
+There are several options available
+
+- [[https://git-scm.com/book/en/v2/Git-on-the-Server-GitWeb][git-web]] is of course an option. If you are on say an arm system with a low amount of ram, this may be workable.
+- [[https://github.com/gogits/gogs][GoGs]] is a fantastic option, workable for low-ish memory systems and easily containerized
+- [[https://gitea.io][GiTea]] is a community maintained fork of GoGs which I personally use, the same pro's exist.
+- [[https://gitlab.com][Gitlab]] is a ruby-on-rails app and is therefore has a different set of memory and deployment requirements. It is however, *VERY* featureful.
+  *NOTE*: A good thing to note here is that Gitlab-CI exists as an integrated product, as it's not what I'm using however, I didn't choose this route.
+- [[https://www.redmine.org][RedMine]] is another ruby-on-rails app solution, my same cautions as with Gitlab apply
+
+I'm going with [[https://gitea.io][GiTea]] as it's quite easy to deploy, has growing community support, and it's nice, fast, and written in Go. I'll admit to being a bit of a Go nut. Let's get that deployed.
+
+#+BEGIN_SRC sh
+#+END_SRC
+
+*** Continuous integration
+
+There are many options available for this as well, just for objectivity's sake let's list some of the more popular ones
+
+- [[https://about.gitlab.com/product/continuous-integration/][Gitlab-CI]] is available to integrate into Gitlab.
+- [[https://buildbot.org][Buildbot]] is a small and very hands on, but if you're a python fan, look into it. It's pretty solid.
+- [[https://jenkins.io][Jenkins]] is one of the most widely used CI tools, worth looking into but it's a bit heavy for my tastes.
+- [[https://drone.io][Drone-CI]] is the way I chose to go for reasons I'll expound on presently.
+

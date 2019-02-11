@@ -11,3 +11,29 @@ In this article we'll be setting up our base org-mode configuration, some extras
                      org-pomodoro))
 #+END_SRC
 
+#+BEGIN_SRC lisp
+(require 'org)
+(require 'ox-publish)
+(require 'htmlize)
+
+(if (display-graphic-p)
+    (load-theme 'org-beautify t)
+    (require 'org-bullets)
+    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+(require 'ox-org)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((dot . t)
+   (shell . t)
+   (emacs-lisp . t)
+   (gnuplot . t)
+   (plantuml . t)
+   (latex . t)
+   (ledger . t)
+   (ditaa . t)
+   (python . t)
+   (ruby . t)
+   (sql . t)))
+#+END_SRC

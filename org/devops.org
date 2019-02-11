@@ -1,0 +1,3 @@
+* DevOpsy type stuff
+
+- [[/org/docker-gitea-drone-pipeline.org.org][Docker+Gitea+Drone-CI Pipeline]]

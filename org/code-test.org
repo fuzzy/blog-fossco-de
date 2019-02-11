@@ -2,7 +2,7 @@
 
 *** eLisp
 
-#+BEGIN_SRC elisp
+#+BEGIN_SRC lisp
 (require 'elfeed)
 (require 'org)
 (require 'dash)
@@ -48,7 +48,7 @@
 
 *** Python
 
-<pre class="prettyprint">
+#+BEGIN_SRC python
 import abc
 import sys
 import stat as st
@@ -120,11 +120,11 @@ from os.path import (curdir, pardir, sep, pathsep, defpath, extsep, altsep,
     devnull)
 
 del _names
-</pre>
+#+END_SRC
 
 *** GoLang
 
-<pre class="prettyprint lang-golang">
+#+BEGIN_SRC go
 package main
 
 import (
@@ -167,50 +167,5 @@ func ReadConfig() *Config {
 	}
 	return retv
 }
-</pre>
+#+END_SRC
 
-* Bootstrap test
-
-<pre class="prettyprint">
-(require 'elfeed)
-(require 'org)
-(require 'dash)
-(require 's)
-(require 'cl-lib)
-(require 'xml)
-
-
-(defgroup elfeed-org nil
-  "Configure the Elfeed RSS reader with an Orgmode file"
-  :group 'comm)
-
-
-(defcustom rmh-elfeed-org-tree-id "elfeed"
-  "The tag or ID property on the trees containing the RSS feeds."
-  :group 'elfeed-org
-  :type 'string)
-
-(defcustom rmh-elfeed-org-ignore-tag "ignore"
-  "The tag on the feed trees that will be ignored."
-  :group 'elfeed-org
-  :type 'string)
-
-(defcustom rmh-elfeed-org-auto-ignore-invalid-feeds nil
-  "Tag feeds to ignore them when a feed could not loaded."
-  :group 'elfeed-org
-  :type 'bool)
-
-(defcustom rmh-elfeed-org-files (list "~/.emacs.d/elfeed.org")
-  "The files where we look to find trees with the `rmh-elfeed-org-tree-id'."
-  :group 'elfeed-org
-  :type '(repeat (file :tag "org-mode file")))
-
-(defvar elfeed-org-new-entry-hook nil
-  "List of new-entry tagger hooks created by elfeed-org.")
-
-(defun rmh-elfeed-org-check-configuration-file (file)
-  "Make sure FILE exists."
-  (when (not (file-exists-p file))
-    (error "Elfeed-org cannot open %s.  Make sure it exists customize the variable \'rmh-elfeed-org-files\'"
-           (abbreviate-file-name file))))
-</pre>
