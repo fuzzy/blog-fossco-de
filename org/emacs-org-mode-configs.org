@@ -11,6 +11,8 @@ In this article we'll be setting up our base org-mode configuration, some extras
                      org-pomodoro))
 #+END_SRC
 
+Pretty straight-forward. I don't think that going over each item in that list will be super beneficial right at the moment. So let's go right ahead and get into the little configuration bits
+
 #+BEGIN_SRC lisp
 (require 'org)
 (require 'ox-publish)
