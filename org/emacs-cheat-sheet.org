@@ -4,7 +4,7 @@
 
 *** T.H.W.A.P.
 
-***** Elfeed
+**** Elfeed
 
 | Emacs key combo | What it does                        |
 |-----------------+-------------------------------------|
@@ -12,7 +12,7 @@
 | C-t r u         | Updates the local cache of stories  |
 | C-t r f         | Set what filters are in current use |
 
-***** Magit
+**** Magit
 
 | Emacs key combo | What it does                                 |
 |-----------------+----------------------------------------------+
