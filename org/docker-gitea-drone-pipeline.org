@@ -215,6 +215,7 @@ There are several options available
 I'm going with [[https://gitea.io][GiTea]] as it's quite easy to deploy, has growing community support, and it's nice, fast, and written in Go. I'll admit to being a bit of a Go nut. Let's get that deployed.
 
 #+BEGIN_SRC sh
+$ docker service create --network services --name git
 #+END_SRC
 
 *** Continuous integration
