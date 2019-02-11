@@ -3,3 +3,8 @@
 *** General
 
 *** T.H.W.A.P.
+
+| Emacs key combo | English version | What it does                                 |
+|-----------------+-----------------+----------------------------------------------|
+| C-t g s         | Ctrl+t g s      | Runs git status via Magit (M-x magit-status) |
+|                 |                 |                                              |
