@@ -212,10 +212,10 @@ There are several options available
   *NOTE*: A good thing to note here is that Gitlab-CI exists as an integrated product, as it's not what I'm using however, I didn't choose this route.
 - [[https://www.redmine.org][RedMine]] is another ruby-on-rails app solution, my same cautions as with Gitlab apply
 
-I'm going with [[https://gitea.io][GiTea]] as it's quite easy to deploy, has growing community support, and it's nice, fast, and written in Go. I'll admit to being a bit of a Go nut. Let's get that deployed.
+I'm going with [[https://gitea.io][GiTea]] as it's quite easy to deploy, has growing community support, and it's nice, fast, and written in Go. I'll admit to being a bit of a Go nut. Let's get that deployed. First our choices, I use SQLite for the database, since I have persistent storage, and not alot of users so simply mounting a /data is sufficient.
 
 #+BEGIN_SRC sh
-$ docker service create --network services --name git
+$ docker service create --network services --name git --label traefik.port=3000 --mount type=bind,src=/srv/git,dst=/data --label traefik.enable=true gitea/gitea
 #+END_SRC
 
 *** Continuous integration
