@@ -4,7 +4,17 @@
 
 *** T.H.W.A.P.
 
-| Emacs key combo | English version | What it does                                 |
-|-----------------+-----------------+----------------------------------------------|
-| C-t g s         | Ctrl+t g s      | Runs git status via Magit (M-x magit-status) |
-|                 |                 |                                              |
+***** Elfeed
+
+| Emacs key combo | What it does                        |
+|-----------------+-------------------------------------|
+| C-t r s         | Starts the Elfeed RSS reader        |
+| C-t r u         | Updates the local cache of stories  |
+| C-t r f         | Set what filters are in current use |
+
+***** Magit
+
+| Emacs key combo | What it does                                 |
+|-----------------+----------------------------------------------+
+| C-t g s         | Runs git status via Magit (M-x magit-status) |
+
