@@ -6,9 +6,10 @@ Below you'll find the most common general emacs key-bindings. Below that, are th
 
 *** File / Buffer Operations
 
-| Key-combo | What it does       |   | Key-combo | What it does         |
-|-----------+--------------------+---+-----------+----------------------|
-| C-x C-f   | Open / Create file |   | C-x C-s   | Save changes to disk |
+| Key-combo | What it does                  |   | Key-combo | What it does         |
+|-----------+-------------------------------+---+-----------+----------------------|
+| C-x C-f   | Open / Create file            |   | C-x C-s   | Save changes to disk |
+| C-x b     | Switch to another open buffer |   |           |                      |
 
 ** T.H.W.A.P.
 
