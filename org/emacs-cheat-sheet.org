@@ -24,21 +24,21 @@ Below you'll find the most common general emacs key-bindings. Below that, are th
 
 Editing a remote file is easy:
 
-#+BEGIN_SRC
+<pre>
 C-x C-f /ssh:user@host:/path/to/file
-#+END_SRC
+</pre>
 
 Adding in a non-standard port is easy too:
 
-#+BEGIN_SRC
+<pre>
 C-x C-f /ssh:user@host#NNNN:/path/to/file
-#+END_SRC
+</pre>
 
 Mutiple hops is an incredibly useful feature:
 
-#+BEGIN_SRC
+<pre>
 C-x C-f /ssh:user@host#NNNN|ssh:user@host:/path/to/file
-#+END_SRC
+</pre>
 
 ** T.H.W.A.P.
 
