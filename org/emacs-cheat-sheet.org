@@ -1,14 +1,18 @@
 * Emacs Cheat Sheets
 
-*** General
+** General
 
+*** File / Buffer Operations
 
+| Key-combo | What it does       |   | Key-combo | What it does         |
+|-----------+--------------------+---+-----------+----------------------|
+| C-x C-f   | Open / Create file |   | C-x C-s   | Save changes to disk |
 
-*** T.H.W.A.P.
+** T.H.W.A.P.
 
 In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begin with the thwap-map, which is defined as: *C-t* or *Ctrl+t*. All key-bindings past that are defined under the "layer", and generally start with the first letter of the layer name.
 
-**** External resources
+*** External resources
 
 - /Layer:/ *rss* /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
 - /Layer:/ *git* /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
