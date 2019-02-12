@@ -17,7 +17,6 @@ Under the /rss/ layer, we use the *r* prefix, so all commands begin with: *C-t r
 | C-t r s   | M-x elfeed                   | Starts the Elfeed RSS reader                                     |   | C-t g s   | M-x magit-staus | Runs git status via Magit |
 | C-t r u   | M-x elfeed-update            | Updates the local cache of stories                               |   |           |                 |                           |
 | C-t r f   | M-x elfeed-seach-live-filter | Set what filters are in current use                              |   |           |                 |                           |
-| C-t r a   | M-x elfeed-add-feed          | Add a feed (this is better done by editing ~/.emacs.d/elfeed.org |   |           |                 |                           |
 | C-t r d   | M-x elfeed-kill-buffer       | Kill the current elfeed buffer                                   |   |           |                 |                           |
 
 **** Magit
