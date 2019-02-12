@@ -4,7 +4,11 @@
 
 *** T.H.W.A.P.
 
+In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begin with the thwap-map, which is defined as: *C-t* or *Ctrl+t*. All key-bindings past that are defined under the "layer", and generally start with the first letter of the layer name.
+
 **** Elfeed
+
+Under the /rss/ layer, we use the *r* prefix, so all commands begin with: *C-t r* or *Ctrl+t r*
 
 | Emacs key combo | Function                     | What it does                                                     |
 |-----------------+------------------------------+------------------------------------------------------------------|
@@ -15,6 +19,8 @@
 | C-t r d         | M-x elfeed-kill-buffer       | Kill the current elfeed buffer                                   |
 
 **** Magit
+
+Under the /git/ layer, we use the *g* prefix, so all commands begin with: *C-t g* or *Ctrl+t g*
 
 | Emacs key combo | Function         | What it does              |
 |-----------------+------------------+---------------------------|
