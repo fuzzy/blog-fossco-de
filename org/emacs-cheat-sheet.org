@@ -10,8 +10,8 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 **** External resources
 
-- *Layer:* /rss/ *Prefix:* /r/ (*C-t r* / *Ctrl+t r*)
-- *Layer:* /git/ *Prefix:* /g/ (*C-t g* / *Ctrl+t g*)
+- /Layer:/ *rss* /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
+- /Layer:/ *git* /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
 
 | Key-combo | Layer | Function                     | What it does                        |   | Key-Combo | Layer | Function        | What it does              |
 |-----------+-------+------------------------------+-------------------------------------+---+-----------+-------+-----------------+---------------------------|
