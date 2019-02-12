@@ -110,6 +110,14 @@ The config.el is generally where I put all of the non-package-list code for each
 ;; and neotree
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+
+(define-key thwap-map (kbd "<up>") 'windmove-up)
+(define-key thwap-map (kbd "<down>") 'windmove-down)
+(define-key thwap-map (kbd "<left>") 'windmove-left)
+(define-key thwap-map (kbd "<right>") 'windmove-right)
+
+(define-key thwap-map (kbd "p l") 'package-list-packages)
+(define-key thwap-map (kbd "p i") 'package-install)
 #+END_SRC
 
 *** "rss" layer
