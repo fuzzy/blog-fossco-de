@@ -10,20 +10,20 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 Under the /rss/ layer, we use the *r* prefix, so all commands begin with: *C-t r* or *Ctrl+t r*
 
-| Emacs key combo | Function                     | What it does                                                     |
-|-----------------+------------------------------+------------------------------------------------------------------|
-| C-t r s         | M-x elfeed                   | Starts the Elfeed RSS reader                                     |
-| C-t r u         | M-x elfeed-update            | Updates the local cache of stories                               |
-| C-t r f         | M-x elfeed-seach-live-filter | Set what filters are in current use                              |
-| C-t r a         | M-x elfeed-add-feed          | Add a feed (this is better done by editing ~/.emacs.d/elfeed.org |
-| C-t r d         | M-x elfeed-kill-buffer       | Kill the current elfeed buffer                                   |
+| Key-combo | Function                     | What it does                                                     |
+|-----------+------------------------------+------------------------------------------------------------------|
+| C-t r s   | M-x elfeed                   | Starts the Elfeed RSS reader                                     |
+| C-t r u   | M-x elfeed-update            | Updates the local cache of stories                               |
+| C-t r f   | M-x elfeed-seach-live-filter | Set what filters are in current use                              |
+| C-t r a   | M-x elfeed-add-feed          | Add a feed (this is better done by editing ~/.emacs.d/elfeed.org |
+| C-t r d   | M-x elfeed-kill-buffer       | Kill the current elfeed buffer                                   |
 
 **** Magit
 
 Under the /git/ layer, we use the *g* prefix, so all commands begin with: *C-t g* or *Ctrl+t g*
 
-| Emacs key combo | Function         | What it does              |
-|-----------------+------------------+---------------------------|
-| C-t g s         | M-x magit-status | Runs git status via Magit |
+| Key-combo | Function         | What it does              |
+|-----------+------------------+---------------------------|
+| C-t g s   | M-x magit-status | Runs git status via Magit |
 
 
