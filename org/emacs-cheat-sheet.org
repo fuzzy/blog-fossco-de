@@ -11,6 +11,13 @@ Below you'll find the most common general emacs key-bindings. Below that, are th
 | C-x C-f   | Open / Create file            |   | C-x C-s   | Save changes to disk |
 | C-x b     | Switch to another open buffer |   |           |                      |
 
+*** Window management
+
+| Key-combo | What it does                              |   | Key-combo | What it does                            |
+|-----------+-------------------------------------------+---+-----------+-----------------------------------------|
+| C-x 2     | Split current buffer horizontally in half |   | C-x 3     | Split current buffer vertically in half |
+| C-x 1     | Display only the current buffer           |   |           |                                         |
+
 ** T.H.W.A.P.
 
 In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begin with the thwap-map, which is defined as: *C-t* or *Ctrl+t*. All key-bindings past that are defined under the "layer", and generally start with the first letter of the layer name.
