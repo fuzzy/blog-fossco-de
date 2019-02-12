@@ -44,12 +44,20 @@ C-x C-f /ssh:user@host#NNNN|ssh:user@host:/path/to/file
 
 In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begin with the thwap-map, which is defined as: *C-t* or *Ctrl+t*. All key-bindings past that are defined under the "layer", and generally start with the first letter of the layer name.
 
+*** Window management
+
+- /Layer:/ *base*
+
+| Key-combo      | Layer  | Function        | What it does             |   | Key-combo | Layer | Function | What it does |
+|----------------+--------+-----------------+--------------------------+---+-----------+-------+----------+--------------|
+| C-t &lt;up&gt; | *base* | M-x windmove-up | Move to the buffer above |   |           |       |          |              |
+
 *** External resources
 
 - /Layer:/ *rss* /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
 - /Layer:/ *git* /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
 
-| Key-combo | Layer | Function                     | What it does                        |   | Key-Combo | Layer | Function        | What it does              |
+| Key-combo | Layer | Function                     | What it does                        |   | Key-combo | Layer | Function        | What it does              |
 |-----------+-------+------------------------------+-------------------------------------+---+-----------+-------+-----------------+---------------------------|
 | C-t r s   | *rss* | M-x elfeed                   | Starts the Elfeed RSS reader        |   | C-t g s   | *git* | M-x magit-staus | Runs git status via Magit |
 | C-t r u   | *rss* | M-x elfeed-update            | Updates the local cache of stories  |   |           |       |                 |                           |
