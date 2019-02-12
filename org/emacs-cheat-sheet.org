@@ -20,6 +20,17 @@ Below you'll find the most common general emacs key-bindings. Below that, are th
 | C-x 1     | Display only the current buffer         |   | C-x 2     | Split current buffer horizontally in half |
 | C-x 3     | Split current buffer vertically in half |   | C-x o     | Swith to "other" or "next" window         |
 
+*** Movement within a buffer
+
+| Key-combo       | What it does   |   | Key-combo       | What it does      |
+|-----------------+----------------+---+-----------------+-------------------|
+| C-n             | down 1 line    |   | C-p             | up 1 line         |
+| C-f             | forward 1 char |   | C-b             | backward 1 char   |
+| C-&lt;left&gt;  | left 1 word    |   | M-&lt;left&gt;  | left 1 word       |
+| C-&lt;right&gt; | right 1 word   |   | M-&lt;right&gt; | right 1 word      |
+| C-e             | end of line    |   | C-a             | beginning of line |
+| C-v             | page down      |   | M-v             | page up           |
+
 *** General notes
 
 **** TRAMP usage notes
