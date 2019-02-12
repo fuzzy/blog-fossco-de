@@ -81,5 +81,12 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 | C-t r f   | *rss* | M-x elfeed-seach-live-filter | Set what filters are in current use |   |           |       |                 |                           |
 | C-t r d   | *rss* | M-x elfeed-kill-buffer       | Kill the current elfeed buffer      |   |           |       |                 |                           |
 
-*** Layer notes
+*** Package management
+
+- /Layer:/ *base* /Prefix:/ *p* (*C-t p* / Ctrl+t p*)
+
+| Key-combo | Layer  | Function                  | What it does            |   | Key-combo | Layer  | Function            | What it does            |
+|-----------+--------+---------------------------+-------------------------+---+-----------+--------+---------------------+-------------------------|
+| C-t p l   | *base* | M-x package-list-packages | List available packages |   | C-t p i   | *base* | M-x package-install | Install a given package |
+
 
