@@ -73,6 +73,7 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 - /Layer:/ *rss* /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
 - /Layer:/ *git* /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
+- /Layer:/ *base* /Prefix:/ *C-w* (*C-t C-w* / *Ctrl+t Ctrl+g*)
 
 | Key-combo | Layer | Function                     | What it does                        |   | Key-combo | Layer  | Function        | What it does                          |
 |-----------+-------+------------------------------+-------------------------------------+---+-----------+--------+-----------------+---------------------------------------|
