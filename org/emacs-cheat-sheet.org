@@ -20,7 +20,7 @@ Below you'll find the most common general emacs key-bindings. Below that, are th
 
 *** General notes
 
-***** TRAMP usage notes
+**** TRAMP usage notes
 
 Editing a remote file is easy:
 
