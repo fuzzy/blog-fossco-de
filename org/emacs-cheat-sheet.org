@@ -1,5 +1,7 @@
 * Emacs Cheat Sheets
 
+Below you'll find the most common general emacs key-bindings. Below that, are the custom keybindings I've defined for my (T.H.W.A.P.) configuration set. You won't have much luck with those unless you are also using my configuration, but everything in the general section should still apply and be, hopefully, quite useful.
+
 ** General
 
 *** File / Buffer Operations
