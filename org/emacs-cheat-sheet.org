@@ -1,3 +1,5 @@
+#+STARTUP: align shrink
+
 * Emacs Cheat Sheets
 
 Below you'll find the most common general emacs key-bindings. Below that, are the custom keybindings I've defined for my (T.H.W.A.P.) configuration set. You won't have much luck with those unless you are also using my configuration, but everything in the general section should still apply and be, hopefully, quite useful.
@@ -48,9 +50,10 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 - /Layer:/ *base*
 
-| Key-combo      | Layer  | Function        | What it does             |   | Key-combo | Layer | Function | What it does |
-|----------------+--------+-----------------+--------------------------+---+-----------+-------+----------+--------------|
-| C-t &lt;up&gt; | *base* | M-x windmove-up | Move to the buffer above |   |           |       |          |              |
+| Key-combo        | Layer  | Function          | What it does             |   | Key-combo         | Layer  | Function           | What it does                    |
+|------------------+--------+-------------------+--------------------------+---+-------------------+--------+--------------------+---------------------------------|
+| C-t &lt;up&gt;   | *base* | M-x windmove-up   | Move to the buffer above |   | C-t &lt;left&gt;  | *base* | M-x windmove-left  | Move to the buffer to the left  |
+| C-t &lt;down&gt; | *base* | M-x windmove-down | Move to the buffer below |   | C-t &lt;right&gt; | *base* | M-x windmove-right | Move to the buffer to the right |
 
 *** External resources
 
