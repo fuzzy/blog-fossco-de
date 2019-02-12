@@ -8,31 +8,43 @@ Below you'll find the most common general emacs key-bindings. Below that, are th
 
 *** File / Buffer Operations
 
-| Key-combo | What it does                            |   | Key-combo | What it does                                       |
-|-----------+-----------------------------------------+---+-----------+----------------------------------------------------|
-| C-x C-f   | Open / Create file                      |   | C-x C-s   | Save changes to disk                               |
-| C-x b     | Switch to another open buffer           |   | C-S-_     | Undo                                               |
-| C-k       | Cut and copy from cursor to end of line |   | C-y       | Yank the last line from paste buffer and insert it |
-| C-x C-c   | Exit emacs                              |   |           |                                                    |
+| Key-combo | What it does                                       |
+|-----------+----------------------------------------------------|
+| C-x C-f   | Open / Create file                                 |
+| C-x b     | Switch to another open buffer                      |
+| C-k       | Cut and copy from cursor to end of line            |
+| C-x C-c   | Exit emacs                                         |
+| C-x C-s   | Save changes to disk                               |
+| C-S-_     | Undo                                               |
+| C-y       | Yank the last line from paste buffer and insert it |
 
 *** Window management
 
-| Key-combo | What it does                            |   | Key-combo | What it does                              |
-|-----------+-----------------------------------------+---+-----------+-------------------------------------------|
-| C-x 1     | Display only the current buffer         |   | C-x 2     | Split current buffer horizontally in half |
-| C-x 3     | Split current buffer vertically in half |   | C-x o     | Swith to "other" or "next" window         |
+| Key-combo | What it does                              |
+|-----------+-------------------------------------------|
+| C-x 1     | Display only the current buffer           |
+| C-x 2     | Split current buffer horizontally in half |
+| C-x 3     | Split current buffer vertically in half   |
+| C-x o     | Swith to "other" or "next" window         |
 
 *** Movement within a buffer
 
-| Key-combo       | What it does    |   | Key-combo       | What it does      |
-|-----------------+-----------------+---+-----------------+-------------------|
-| C-n             | Down 1 line     |   | C-p             | Up 1 line         |
-| C-f             | Forward 1 char  |   | C-b             | Backward 1 char   |
-| C-&lt;left&gt;  | Left 1 word     |   | M-&lt;left&gt;  | Left 1 word       |
-| C-&lt;right&gt; | Right 1 word    |   | M-&lt;right&gt; | Right 1 word      |
-| C-e             | End of line     |   | C-a             | Beginning of line |
-| C-v             | Page down       |   | M-v             | Page up           |
-| S-M-,           | Start of buffer |   | S-M-.           | End of buffer     |
+| Key-combo       | What it does      |
+|-----------------+-------------------|
+| C-n             | Down 1 line       |
+| C-p             | Up 1 line         |
+| C-f             | Forward 1 char    |
+| C-b             | Backward 1 char   |
+| C-&lt;left&gt;  | Left 1 word       |
+| M-&lt;left&gt;  | Left 1 word       |
+| C-&lt;right&gt; | Right 1 word      |
+| M-&lt;right&gt; | Right 1 word      |
+| C-e             | End of line       |
+| C-a             | Beginning of line |
+| C-v             | Page down         |
+| M-v             | Page up           |
+| S-M-,           | Start of buffer   |
+| S-M-.           | End of buffer     |
 
 *** General notes
 
