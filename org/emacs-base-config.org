@@ -90,6 +90,7 @@ So our local/base/imports.el at a minimum, would look something like this:
 
 #+BEGIN_SRC lisp
 (setq package-list '(better-defaults
+                     wttrin
                      neotree
                      yasnippet))
 #+END_SRC
@@ -99,25 +100,25 @@ Let's examine that for a quick second, it will be quick I promise. I mean, there
 The config.el is generally where I put all of the non-package-list code for each layer. You can setup all of the packages you import for the layer there easily enough. So our local/base/config.el would look a bit like this:
 
 #+BEGIN_SRC lisp
-;; Set our base keyboard prefix
+(require 'better-defaults)
+(require 'yasnippet)
+(require 'neotree)
+
+(yas-global-mode 1)
+(global-set-key [f8] 'neotree-toggle)
+
 (define-prefix-command 'thwap-map)
 (global-set-key (kbd "C-t") 'thwap-map)
-;; load our defaults
-(require 'better-defaults)
-;; setup yasnippet
-(require 'yasnippet)
-(yas-global-mode 1)
-;; and neotree
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
 
 (define-key thwap-map (kbd "<up>") 'windmove-up)
 (define-key thwap-map (kbd "<down>") 'windmove-down)
 (define-key thwap-map (kbd "<left>") 'windmove-left)
 (define-key thwap-map (kbd "<right>") 'windmove-right)
 
-(define-key thwap-map (kbd "p l") 'package-list-packages)
-(define-key thwap-map (kbd "p i") 'package-install)
+(define-key thwap-map (kbd "C-p l") 'package-list-packages)
+(define-key thwap-map (kbd "C-p i") 'package-install)
+
+(define-key thwap-map (kbd "C-w") 'wttrin)
 #+END_SRC
 
 *** "rss" layer
