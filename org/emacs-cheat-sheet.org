@@ -13,10 +13,10 @@ Below you'll find the most common general emacs key-bindings. Below that, are th
 
 *** Window management
 
-| Key-combo | What it does                              |   | Key-combo | What it does                            |
-|-----------+-------------------------------------------+---+-----------+-----------------------------------------|
-| C-x 2     | Split current buffer horizontally in half |   | C-x 3     | Split current buffer vertically in half |
-| C-x 1     | Display only the current buffer           |   |           |                                         |
+| Key-combo | What it does                            |   | Key-combo | What it does                              |
+|-----------+-----------------------------------------+---+-----------+-------------------------------------------+
+| C-x 1     | Display only the current buffer         |   | C-x 2     | Split current buffer horizontally in half |
+| C-x 3     | Split current buffer vertically in half |   |           |                                           |
 
 *** General notes
 
