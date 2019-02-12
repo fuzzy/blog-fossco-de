@@ -8,9 +8,10 @@
 
 In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begin with the thwap-map, which is defined as: *C-t* or *Ctrl+t*. All key-bindings past that are defined under the "layer", and generally start with the first letter of the layer name.
 
-**** Elfeed
+**** External resources
 
-Under the /rss/ layer, we use the *r* prefix, so all commands begin with: *C-t r* or *Ctrl+t r*
+- *Layer*: /rss/ *Prefix*: /r/ (*C-t r* / *Ctrl+t r*)
+- *Layer*: /git/ *Prefix*: /g/ (*C-t g* / *Ctrl+t g*)
 
 | Key-combo | Layer | Function                     | What it does                        |   | Key-Combo | Layer | Function        | What it does              |
 |-----------+-------+------------------------------+-------------------------------------+---+-----------+-------+-----------------+---------------------------|
@@ -18,13 +19,5 @@ Under the /rss/ layer, we use the *r* prefix, so all commands begin with: *C-t r
 | C-t r u   | *rss* | M-x elfeed-update            | Updates the local cache of stories  |   |           |       |                 |                           |
 | C-t r f   | *rss* | M-x elfeed-seach-live-filter | Set what filters are in current use |   |           |       |                 |                           |
 | C-t r d   | *rss* | M-x elfeed-kill-buffer       | Kill the current elfeed buffer      |   |           |       |                 |                           |
-
-**** Magit
-
-Under the /git/ layer, we use the *g* prefix, so all commands begin with: *C-t g* or *Ctrl+t g*
-
-| Key-combo | Function         | What it does              |
-|-----------+------------------+---------------------------|
-| C-t g s   | M-x magit-status | Runs git status via Magit |
 
 
