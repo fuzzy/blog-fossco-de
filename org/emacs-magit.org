@@ -1,3 +1,31 @@
 * Emacs Git Integration
 
 We'll be using Magit, and let me tell you, I have barely scratched the surface of the functionality Magit has, and it is already the greatest thing since the invention of inventions.
+
+| Name  |       Version | Home             |
+|-------+---------------+------------------|
+| magit | 20190202.1535 | [[https://magit.vc]] |
+
+<br \/>
+Our base imports are simple, as we only import magit at this time, so our *~/.emacs.d/local/git/imports.el* file would look like this:
+
+#+BEGIN_SRC lisp
+(setq package-list '(magit))
+#+END_SRC
+
+And our only configuration item is a keybinding to fit our conventions, so our *~/.emacs.d/local/git/config.el* file would look like:
+
+#+BEGIN_SRC lisp
+(require 'magit)
+(define-key thwap-map (kbd "g s") 'magit-status)
+#+END_SRC
+
+Finally, we need to make sure that our *git* layer is present in our thwap/layers variable.
+
+#+BEGIN_SRC lisp
+(setq thwap/layers '("base"
+                     "rss"
+                     "git"))
+#+END_SRC
+
+* TODO Example of Magit workflow
