@@ -85,8 +85,8 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 - /Layer:/ *base* /Prefix:/ *p* (*C-t p* / Ctrl+t p*)
 
-| Key-combo | Layer  | What it does            |   | Key-combo | Layer  | What it does            |
-|-----------+--------+-------------------------+---+-----------+--------+-------------------------|
-| C-t p l   | *base* | List available packages |   | C-t p i   | *base* | Install a given package |
+| Key-combo | Layer  | What it does            | Key-combo | Layer  | What it does            |
+|-----------+--------+-------------------------+-----------+--------+-------------------------|
+| C-t p l   | *base* | List available packages | C-t p i   | *base* | Install a given package |
 
 
