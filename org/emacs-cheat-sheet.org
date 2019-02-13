@@ -4,35 +4,8 @@
 
 Below you'll find the most common general emacs key-bindings. Below that, are the custom keybindings I've defined for my (T.H.W.A.P.) configuration set. You won't have much luck with those unless you are also using my configuration, but everything in the general section should still apply and be, hopefully, quite useful.
 
-** General
+- [[/org/emacs-cheat-sheet-base.org.org][Basic Emacs cheat-sheet]]
 
-*** File / Buffer Operations
-
-| Key-combo | What it does                            |   | Key-combo | What it does                                       |
-|-----------+-----------------------------------------+---+-----------+----------------------------------------------------|
-| C-x C-f   | Open / Create file                      |   | C-x C-s   | Save changes to disk                               |
-| C-x b     | Switch to another open buffer           |   | C-S-_     | Undo                                               |
-| C-k       | Cut and copy from cursor to end of line |   | C-y       | Yank the last line from paste buffer and insert it |
-| C-x C-c   | Exit emacs                              |   |           |                                                    |
-
-*** Window management
-
-| Key-combo | What it does                            |   | Key-combo | What it does                              |
-|-----------+-----------------------------------------+---+-----------+-------------------------------------------|
-| C-x 1     | Display only the current buffer         |   | C-x 2     | Split current buffer horizontally in half |
-| C-x 3     | Split current buffer vertically in half |   | C-x o     | Swith to "other" or "next" window         |
-
-*** Movement within a buffer
-
-| Key-combo       | What it does    |   | Key-combo       | What it does      |
-|-----------------+-----------------+---+-----------------+-------------------|
-| C-n             | Down 1 line     |   | C-p             | Up 1 line         |
-| C-f             | Forward 1 char  |   | C-b             | Backward 1 char   |
-| C-&lt;left&gt;  | Left 1 word     |   | M-&lt;left&gt;  | Left 1 word       |
-| C-&lt;right&gt; | Right 1 word    |   | M-&lt;right&gt; | Right 1 word      |
-| C-e             | End of line     |   | C-a             | Beginning of line |
-| C-v             | Page down       |   | M-v             | Page up           |
-| S-M-,           | Start of buffer |   | S-M-.           | End of buffer     |
 
 *** General notes
 
