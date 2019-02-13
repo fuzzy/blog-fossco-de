@@ -64,10 +64,19 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 - /Layer:/ *base*
 
-| Key-combo        | Layer  | What it does             | Key-combo         | Layer  | What it does                    |
-|------------------+--------+--------------------------+-------------------+--------+---------------------------------|
-| C-t &lt;up&gt;   | *base* | Move to the buffer above | C-t &lt;left&gt;  | *base* | Move to the buffer to the left  |
-| C-t &lt;down&gt; | *base* | Move to the buffer below | C-t &lt;right&gt; | *base* | Move to the buffer to the right |
+<table style="">
+<tr><td>
+| Key-combo        | Layer  | What it does             |
+|------------------+--------+--------------------------|
+| C-t &lt;up&gt;   | *base* | Move to the buffer above |
+| C-t &lt;down&gt; | *base* | Move to the buffer below |
+</td><td>
+| Key-combo         | Layer  | What it does                    |
+|-------------------+--------+---------------------------------|
+| C-t &lt;left&gt;  | *base* | Move to the buffer to the left  |
+| C-t &lt;right&gt; | *base* | Move to the buffer to the right |
+</td></tr>
+</table>
 
 *** External resources
 
