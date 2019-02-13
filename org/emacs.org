@@ -4,7 +4,7 @@ I may repost some other articles here from outside sources from time to time. I 
 
 *** Extras
 
-****** TODO [[/org/emacs-cheat-sheet.org.org][Emacs Cheat Sheets]]
+****** [[/org/emacs-cheat-sheet.org.org][Emacs Cheat Sheets]]
 
 *** General configurations
 
@@ -12,7 +12,7 @@ I may repost some other articles here from outside sources from time to time. I 
 
 *** Org-Mode configurations
 
-****** TODO [[/org/emacs-magit.org.org][Magit integration]] *(Part 2)*
+****** [[/org/emacs-magit.org.org][Magit integration]] *(Part 2)*
 ****** [[https://blog.fossco.de/org/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 3)*
 ****** TODO Org-mode publishing with GoOrgEous George *(Part 4)*
 
