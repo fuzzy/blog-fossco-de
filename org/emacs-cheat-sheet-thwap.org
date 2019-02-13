@@ -15,9 +15,9 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 *** External resources
 
-- /Layer:/ *rss* /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
-- /Layer:/ *git* /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
-- /Layer:/ *base* /Prefix:/ *C-w* (*C-t C-w* / *Ctrl+t Ctrl+w*)
+- /Layer:/ [[/org/emacs-base-config.org.org][*rss*]] /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
+- /Layer:/ [[/org/emacs-magit.org.org][*git*]] /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
+- /Layer:/ [[/org/emacs-base-config.org.org][*base*]] /Prefix:/ *C-w* (*C-t C-w* / *Ctrl+t Ctrl+w*)
 
 | Key-combo | Layer  | What it does                        |
 |-----------+--------+-------------------------------------|
@@ -30,7 +30,7 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 *** Package management
 
-- /Layer:/ *base* /Prefix:/ *p* (*C-t p* / Ctrl+t p*)
+- /Layer:/ [[/org/emacs-base-config.org.org][*base*]] /Prefix:/ *p* (*C-t p* / Ctrl+t p*)
 
 | Key-combo | Layer  | What it does            |
 |-----------+--------+-------------------------|
