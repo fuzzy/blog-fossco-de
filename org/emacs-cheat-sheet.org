@@ -64,29 +64,29 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 - /Layer:/ *base*
 
-| Key-combo        | Layer  | Function          | What it does             |   | Key-combo         | Layer  | Function           | What it does                    |
-|------------------+--------+-------------------+--------------------------+---+-------------------+--------+--------------------+---------------------------------|
-| C-t &lt;up&gt;   | *base* | M-x windmove-up   | Move to the buffer above |   | C-t &lt;left&gt;  | *base* | M-x windmove-left  | Move to the buffer to the left  |
-| C-t &lt;down&gt; | *base* | M-x windmove-down | Move to the buffer below |   | C-t &lt;right&gt; | *base* | M-x windmove-right | Move to the buffer to the right |
+| Key-combo        | Layer  | What it does             |   | Key-combo         | Layer  | What it does                    |
+|------------------+--------+--------------------------+---+-------------------+--------+---------------------------------|
+| C-t &lt;up&gt;   | *base* | Move to the buffer above |   | C-t &lt;left&gt;  | *base* | Move to the buffer to the left  |
+| C-t &lt;down&gt; | *base* | Move to the buffer below |   | C-t &lt;right&gt; | *base* | Move to the buffer to the right |
 
 *** External resources
 
 - /Layer:/ *rss* /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
 - /Layer:/ *git* /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
 
-| Key-combo | Layer | Function                     | What it does                        |   | Key-combo | Layer | Function        | What it does              |
-|-----------+-------+------------------------------+-------------------------------------+---+-----------+-------+-----------------+---------------------------|
-| C-t r s   | *rss* | M-x elfeed                   | Starts the Elfeed RSS reader        |   | C-t g s   | *git* | M-x magit-staus | Runs git status via Magit |
-| C-t r u   | *rss* | M-x elfeed-update            | Updates the local cache of stories  |   |           |       |                 |                           |
-| C-t r f   | *rss* | M-x elfeed-seach-live-filter | Set what filters are in current use |   |           |       |                 |                           |
-| C-t r d   | *rss* | M-x elfeed-kill-buffer       | Kill the current elfeed buffer      |   |           |       |                 |                           |
+| Key-combo | Layer | What it does                        |   | Key-combo | Layer | What it does              |
+|-----------+-------+-------------------------------------+---+-----------+-------+---------------------------|
+| C-t r s   | *rss* | Starts the Elfeed RSS reader        |   | C-t g s   | *git* | Runs git status via Magit |
+| C-t r u   | *rss* | Updates the local cache of stories  |   |           |       |                           |
+| C-t r f   | *rss* | Set what filters are in current use |   |           |       |                           |
+| C-t r d   | *rss* | Kill the current elfeed buffer      |   |           |       |                           |
 
 *** Package management
 
 - /Layer:/ *base* /Prefix:/ *p* (*C-t p* / Ctrl+t p*)
 
-| Key-combo | Layer  | Function                  | What it does            |   | Key-combo | Layer  | Function            | What it does            |
-|-----------+--------+---------------------------+-------------------------+---+-----------+--------+---------------------+-------------------------|
-| C-t p l   | *base* | M-x package-list-packages | List available packages |   | C-t p i   | *base* | M-x package-install | Install a given package |
+| Key-combo | Layer  | What it does            |   | Key-combo | Layer  | What it does            |
+|-----------+--------+-------------------------+---+-----------+--------+-------------------------|
+| C-t p l   | *base* | List available packages |   | C-t p i   | *base* | Install a given package |
 
 
