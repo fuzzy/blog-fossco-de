@@ -1,0 +1,38 @@
+** T.H.W.A.P.
+
+In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begin with the thwap-map, which is defined as: *C-t* or *Ctrl+t*. All key-bindings past that are defined under the "layer", and generally start with the first letter of the layer name.
+
+*** Window management
+
+- /Layer:/ *base*
+
+| Key-combo         | Layer  | What it does                    |
+|-------------------+--------+---------------------------------|
+| C-t &lt;up&gt;    | *base* | Move to the buffer above        |
+| C-t &lt;down&gt;  | *base* | Move to the buffer below        |
+| C-t &lt;left&gt;  | *base* | Move to the buffer to the left  |
+| C-t &lt;right&gt; | *base* | Move to the buffer to the right |
+
+*** External resources
+
+- /Layer:/ *rss* /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
+- /Layer:/ *git* /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
+- /Layer:/ *base* /Prefix:/ *C-w* (*C-t C-w* / *Ctrl+t Ctrl+w*)
+
+| Key-combo | Layer  | What it does                        |
+|-----------+--------+-------------------------------------|
+| C-t r s   | *rss*  | Starts the Elfeed RSS reader        |
+| C-t r u   | *rss*  | Updates the local cache of stories  |
+| C-t r f   | *rss*  | Set what filters are in current use |
+| C-t r d   | *rss*  | Kill the current elfeed buffer      |
+| C-t g s   | *git*  | Runs git status via Magit           |
+| C-t C-w   | *base* | Gets weather from [[https://wttr.in]]   |
+
+*** Package management
+
+- /Layer:/ *base* /Prefix:/ *p* (*C-t p* / Ctrl+t p*)
+
+| Key-combo | Layer  | What it does            |
+|-----------+--------+-------------------------|
+| C-t C-p l | *base* | List available packages |
+| C-t C-p i | *base* | Install a given package |
