@@ -9,6 +9,7 @@ When we left off in part #01 of our series, we had defined a framework for addin
 | org-beautify-theme | 20170908.2218 | [[https://github.com/jonnay/org-beautify-theme]] |
 | org-pomodoro       | 20171108.2114 | [[https://github.com/lolownia/org-pomodoro]]     |
 
+<br \/>
 In this article we'll be setting up our base org-mode configuration, some extras and things to make org even nicer than it already is. Which is honestly saying something. We'll begin by adding a directory, "mkdir -p ~/.emacs.d/local/org" should do that just fine if you're on a UNIX or UNIX-like system. Our imports.el file inside would look like:
 
 #+BEGIN_SRC lisp
