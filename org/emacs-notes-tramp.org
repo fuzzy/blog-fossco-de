@@ -1,0 +1,19 @@
+**** TRAMP usage notes
+
+Editing a remote file is easy:
+
+<pre>
+C-x C-f /ssh:user@host:/path/to/file
+</pre>
+
+Adding in a non-standard port is easy too:
+
+<pre>
+C-x C-f /ssh:user@host#NNNN:/path/to/file
+</pre>
+
+Mutiple hops is an incredibly useful feature:
+
+<pre>
+C-x C-f /ssh:user@host#NNNN|ssh:user@host:/path/to/file
+</pre>

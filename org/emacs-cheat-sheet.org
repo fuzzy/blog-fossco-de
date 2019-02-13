@@ -2,32 +2,12 @@
 
 * Emacs Cheat Sheets
 
-Below you'll find the most common general emacs key-bindings. Below that, are the custom keybindings I've defined for my (T.H.W.A.P.) configuration set. You won't have much luck with those unless you are also using my configuration, but everything in the general section should still apply and be, hopefully, quite useful.
-
 - [[/org/emacs-cheat-sheet-base.org.org][Basic Emacs cheat-sheet]]
 - [[/org/emacs-cheat-sheet-thwap.org.org][T.H.W.A.P. cheat-sheet]]
 
 *** General notes
 
-**** TRAMP usage notes
-
-Editing a remote file is easy:
-
-<pre>
-C-x C-f /ssh:user@host:/path/to/file
-</pre>
-
-Adding in a non-standard port is easy too:
-
-<pre>
-C-x C-f /ssh:user@host#NNNN:/path/to/file
-</pre>
-
-Mutiple hops is an incredibly useful feature:
-
-<pre>
-C-x C-f /ssh:user@host#NNNN|ssh:user@host:/path/to/file
-</pre>
+- [[/org/emacs-notes-tramp.org.org][Tramp notes]]
 
 
 
