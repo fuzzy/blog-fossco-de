@@ -1,4 +1,4 @@
-**** TRAMP usage notes
+* TRAMP usage notes
 
 Editing a remote file is easy:
 
