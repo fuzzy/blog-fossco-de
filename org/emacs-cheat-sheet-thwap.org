@@ -4,7 +4,7 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 *** Window management
 
-- /Layer:/ *base*
+- /Layer:/ [[/org/emacs-base-config.org.org][*base*]]
 
 | Key-combo         | Layer  | What it does                    |
 |-------------------+--------+---------------------------------|
