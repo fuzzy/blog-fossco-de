@@ -73,13 +73,14 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 - /Layer:/ *rss* /Prefix:/ *r* (*C-t r* / *Ctrl+t r*)
 - /Layer:/ *git* /Prefix:/ *g* (*C-t g* / *Ctrl+t g*)
+- /Layer:/ *base* /Prefix:/ *C-w* (*C-t C-w* / *Ctrl+t Ctrl+w*)
 
-| Key-combo | Layer | What it does                        | Key-combo | Layer | What it does              |
-|-----------+-------+-------------------------------------+-----------+-------+---------------------------|
-| C-t r s   | *rss* | Starts the Elfeed RSS reader        | C-t g s   | *git* | Runs git status via Magit |
-| C-t r u   | *rss* | Updates the local cache of stories  |           |       |                           |
-| C-t r f   | *rss* | Set what filters are in current use |           |       |                           |
-| C-t r d   | *rss* | Kill the current elfeed buffer      |           |       |                           |
+| Key-combo | Layer | What it does                        | Key-combo | Layer  | What it does                      |
+|-----------+-------+-------------------------------------+-----------+--------+-----------------------------------|
+| C-t r s   | *rss* | Starts the Elfeed RSS reader        | C-t g s   | *git*  | Runs git status via Magit         |
+| C-t r u   | *rss* | Updates the local cache of stories  | C-t C-w   | *base* | Gets weather from [[https://wttr.in]] |
+| C-t r f   | *rss* | Set what filters are in current use |           |        |                                   |
+| C-t r d   | *rss* | Kill the current elfeed buffer      |           |        |                                   |
 
 *** Package management
 
@@ -87,6 +88,6 @@ In the T.H.W.A.P. Emacs configuration, we specify all of our keybindings to begi
 
 | Key-combo | Layer  | What it does            | Key-combo | Layer  | What it does            |
 |-----------+--------+-------------------------+-----------+--------+-------------------------|
-| C-t p l   | *base* | List available packages | C-t p i   | *base* | Install a given package |
+| C-t C-p l | *base* | List available packages | C-t C-p i | *base* | Install a given package |
 
 
