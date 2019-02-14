@@ -6,29 +6,29 @@ I may repost some other articles here from outside sources from time to time. I 
 
 ****** [[/org/emacs-cheat-sheet.org.org][Emacs Cheat Sheets]]
 
-*** General configurations
+** General configurations
 
-****** [[https://blog.fossco.de/org/emacs-base-config.org.org][Base Emacs configuration]] *(Part 1)*
-****** [[/org/emacs-magit.org.org][Magit integration]] *(Part 2)*
+**** [[https://blog.fossco.de/org/emacs-base-config.org.org][Base Emacs configuration]] *(Part 1)*
+**** [[/org/emacs-magit.org.org][Magit integration]] *(Part 2)*
 
-*** Org-Mode configurations
+** Org-Mode configurations
 
-****** [[https://blog.fossco.de/org/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 3)*
+**** [[https://blog.fossco.de/org/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 3)*
 
-*** Development configurations
+** Development configurations
 
-****** TODO Python development with Emacs *(Part 4)*
-****** TODO Golang development with Emacs *(Part 5)*
+**** TODO Python development with Emacs *(Part 4)*
+**** TODO Golang development with Emacs *(Part 5)*
 
-*** DevOps configurations
+** DevOps configurations
 
-****** TODO Ansible development *(Part 6)*
-****** TODO Working with Docker containers *(Part 7)*
-****** TODO Working with SaltStack *(Part 8)*
+**** TODO Ansible development *(Part 6)*
+**** TODO Working with Docker containers *(Part 7)*
+**** TODO Working with SaltStack *(Part 8)*
 
-*** Emacs workflow examples
+** Emacs workflow examples
 
-****** TODO Org-mode publishing with GoOrgEous George
-****** TODO Generating diagrams with org-mindmap
-****** TODO Generating more complex diagrams with ditaa and artist-mode
-****** TODO Generating complex and flashy diagrams with PlantUML and org-mode
+**** TODO Org-mode publishing with GoOrgEous George
+**** TODO Generating diagrams with org-mindmap
+**** TODO Generating more complex diagrams with ditaa and artist-mode
+**** TODO Generating complex and flashy diagrams with PlantUML and org-mode
