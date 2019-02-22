@@ -1,0 +1,22 @@
+#+AUTHOR: Mike 'Fuzzy' Partin
+#+TITLE: A self-contained and portable home directory
+
+* Synopsis
+
+I have a *LOT* of machines in my home network. Some are your standard off-the-shelf PC types, x86_64(amd64) stuff mainly,
+although I do have 2 i686 machines (eeePCs displaying monitoring stats). I also have a [[https://uproxx.files.wordpress.com/2014/08/what-is-a-plethora.gif?w=650][plethora]] of ARM machines, both
+32 and 64 bit (armv6/7 and aarch64[arm64] respectively). I currently use a RockPro64 as my main desktop machine, but it fluctuates
+based on stuff like, "what arm board am I playing with atm?" "is it a day that ends in 'y'?" "do I have anything better to do?".
+You know, normal stuff. Anyhow, it's obvious that I'm only able to do this and still get things done, one of two ways: 1) I get really
+good at or automate my local environment setup (install anything I might need, check out my normal repos, setup configurations etc).
+or 2) I have a portable setup that I can cart around either via some mechanism like NFS (or any shared network filesystem) or an external
+drive.
+
+* Goals
+
+1. Create an external drive that contains the home directory setup
+2. Ensure tools are installed in a os/arch agnostic manner
+3. Ensure a consistent toolset across all os/arch combinations
+4. Provide a backup and recovery mechanism
+
+* Tools
