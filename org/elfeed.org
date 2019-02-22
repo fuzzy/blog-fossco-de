@@ -1,14 +1,14 @@
 * blogs                                                                  :elfeed:
 ** daily                                                                   :daily:
-*** http://xkcd.com/rss.xml                                            :xkcd:
-*** https://www.smbc-comics.com/comic/rss                              :smbc:
+*** [[http://xkcd.com/rss.xml]]                                            :xkcd:
+*** [[https://www.smbc-comics.com/comic/rss]]                              :smbc:
 
 ** emacs                                                                  :emacs:
-*** http://www.reddit.com/r/emacs/.rss                               :reddit:
-*** http://planet.emacsen.org/atom.xml                         :planet_emacs:
-*** http://feeds.feedburner.com/XahsEmacsBlog                           :xah:
-*** http://pragmaticemacs.com/feed/                         :pragmatic_emacs:
-*** http://emacs.stackexchange.com/feeds                        :emacs_sexch:
+*** [[http://www.reddit.com/r/emacs/.rss]]                               :reddit:
+*** [[http://planet.emacsen.org/atom.xml]]                         :planet_emacs:
+*** [[http://feeds.feedburner.com/XahsEmacsBlog]]                           :xah:
+*** [[http://pragmaticemacs.com/feed/]]                         :pragmatic_emacs:
+*** [[http://emacs.stackexchange.com/feeds]]                        :emacs_sexch:
 
 ** Development                                                            :devel:
 *** Python                                                           :python:
