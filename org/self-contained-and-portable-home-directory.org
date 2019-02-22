@@ -20,3 +20,9 @@ drive.
 4. Provide a backup and recovery mechanism
 
 * Tools
+
+1. POSIX sh (we'll be writing all of our automation to the lowest common denominator)
+2. Git (gonna be needing this thing)
+3. C/C++ Compiler toolchain and dev tools
+
+* Getting started
