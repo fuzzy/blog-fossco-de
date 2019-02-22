@@ -12,33 +12,33 @@
 
 ** Development                                                            :devel:
 *** Python                                                           :python:
-**** https://planetpython.org/rss20.xml                       :planet_python:
-**** http://lucumr.pocoo.org/feed.atom                               :lucumr:
-**** http://www.blog.pythonlibrary.org/feed/                         
-**** https://doughellmann.com/blog/feed/                             
-**** http://feeds.feedburner.com/LifeIsShort-YouNeedPython?format=xml
+**** [[https://planetpython.org/rss20.xml]]                       :planet_python:
+**** [[http://lucumr.pocoo.org/feed.atom]]                               :lucumr:
+**** [[http://www.blog.pythonlibrary.org/feed/]]                         
+**** [[https://doughellmann.com/blog/feed/]]                             
+**** [[http://feeds.feedburner.com/LifeIsShort-YouNeedPython?format=xml]]
 *** Golang                                                           :golang:
-**** https://golang.ch/feed/                                         
-**** https://appliedgo.net/index.xml                                 
-**** https://changelog.com/gotime/feed                               
-**** https://dave.cheney.net/category/golang/feed                    
-**** https://blog.golang.org/feed.atom                               
-**** https://golangcode.com/index.xml                                
-**** https://blog.learngoprogramming.com/feed                        
+**** [[https://golang.ch/feed/]]                                         
+**** [[https://appliedgo.net/index.xml]]                                 
+**** [[https://changelog.com/gotime/feed]]                               
+**** [[https://dave.cheney.net/category/golang/feed]]                    
+**** [[https://blog.golang.org/feed.atom]]                               
+**** [[https://golangcode.com/index.xml]]                                
+**** [[https://blog.learngoprogramming.com/feed]]                        
 
 ** Workflow                                                            :workflow:
 *** Project management                                                       :pm:
-**** https://www.scrum.org/resources/blog/rss.xml                        
-**** http://www.scrum-breakfast.com/feeds/posts/default?alt=rss          
-**** http://feeds.dzone.com/agile                                        
-**** https://www.projectmanagement.com/RSS/projectmanagement.xml         
-**** https://www.mountaingoatsoftware.com/blog/rss                       
+**** [[https://www.scrum.org/resources/blog/rss.xml]]                        
+**** [[http://www.scrum-breakfast.com/feeds/posts/default?alt=rss]]          
+**** [[http://feeds.dzone.com/agile]]                                        
+**** [[https://www.projectmanagement.com/RSS/projectmanagement.xml]]         
+**** [[https://www.mountaingoatsoftware.com/blog/rss]]                       
 *** Devops                                                               :devops:
-**** http://feeds.dzone.com/devops                                   
+**** [[http://feeds.dzone.com/devops]]                                   
 
 * News                                                                     :elfeed:
 ** World                                                                   :world:
-*** http://feeds.bbci.co.uk/news/world/rss.xml                   
+*** [[http://feeds.bbci.co.uk/news/world/rss.xml]]                   
 *** https://news.google.com/?hl=en-US&gl=US&ceid=US:en&output=rss
 
 ** Technology                                                              :tech:
