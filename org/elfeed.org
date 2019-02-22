@@ -1,4 +1,4 @@
-* blogs                                                              :elfeed:
+* Blogs                                                             :elfeed:
 *** daily                                                             :daily:
 **** [[http://xkcd.com/rss.xml]]                                           :xkcd:
 **** [[https://www.smbc-comics.com/comic/rss]]                             :smbc:
