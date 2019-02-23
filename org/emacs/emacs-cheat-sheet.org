@@ -2,12 +2,12 @@
 
 * Emacs Cheat Sheets
 
-- [[/org/emacs-cheat-sheet-base.org.org][Basic Emacs cheat-sheet]]
-- [[/org/emacs-cheat-sheet-thwap.org.org][T.H.W.A.P. cheat-sheet]]
+- [[/org/emacs/emacs-cheat-sheet-base.org.org][Basic Emacs cheat-sheet]]
+- [[/org/emacs/emacs-cheat-sheet-thwap.org.org][T.H.W.A.P. cheat-sheet]]
 
 * General notes
 
-- [[/org/emacs-notes-tramp.org.org][Tramp notes]]
+- [[/org/emacs/emacs-notes-tramp.org.org][Tramp notes]]
 
 
 
