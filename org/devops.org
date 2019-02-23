@@ -1,4 +1,0 @@
-** DevOpsy type stuff
-**** TODO [[/org/docker-gitea-drone-pipeline.org.org][Docker+Gitea+Drone-CI Pipeline]]
-**** TODO [[/org/low-power-ssd-nas-router-buildout.org.org][Low power SSD based NAS/Router buildout]]
-**** TODO [[/org/self-contained-and-portable-home-directory.org.org][Building a self-contained, and portable home directory]]
