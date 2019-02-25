@@ -1,6 +1,9 @@
 * Emacs / Vim Resources                                              :editor:
+
 ** Emacs                                                              :emacs:                                            
+
 *** Org-Mode                                                       :org_mode:
+
    - [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
    - [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing Org-mode files to HTML]]
    - [[https://www.emacswiki.org/emacs/org-publish.el][EmacsWiki: org-publish.el]]
@@ -22,7 +25,9 @@
    - [[http://orgmode.org/manual/CSS-support.html#CSS-support][The Org Manual: CSS support]]
    - [[https://cestlaz.github.io/post/using-emacs-54-org-tables/][Using Emacs 54 Org Tables]]
    - [[https://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Emacs org-mode examples and cookbook]]
+
 *** General
+
    - [[https://elpa.gnu.org/packages/archive-contents][https://elpa.gnu.org/packages/archive-contents]]
    - [[https://johnsogg.github.io/emacs-golang][Set up Emacs for Golang from scratch - December 2016 · jnl]]
    - [[https://github.com/magit/magit/wiki/Cheatsheet][Cheatsheet · magit/magit Wiki]]
