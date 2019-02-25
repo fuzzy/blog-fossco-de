@@ -16,7 +16,7 @@
       function SwitchArrows(c, s) {
           cobj = document.getElementById(c);
           sobj = document.getElementById(s);
-          if cobj.style.visibility == "visible" {
+          if (cobj.style.visibility === "visible") {
               cobj.src = "/static/up.png";
           } else {
               cobj.src = "/static/down.png";
