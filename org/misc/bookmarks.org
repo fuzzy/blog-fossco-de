@@ -1,7 +1,8 @@
 * Emacs / Vim Resources                                              :editor:
 
-** Org-Mode                                                  :org_mode:emacs:
+** Org-Mode <button data-toggle="collapse" data-target="#org-mode"> </button> :org_mode:emacs:
 
+<div id="org-mode" class="collapse">
   - [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
   - [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing Org-mode files to HTML]]
   - [[https://www.emacswiki.org/emacs/org-publish.el][EmacsWiki: org-publish.el]]
@@ -23,6 +24,7 @@
   - [[http://orgmode.org/manual/CSS-support.html#CSS-support][The Org Manual: CSS support]]
   - [[https://cestlaz.github.io/post/using-emacs-54-org-tables/][Using Emacs 54 Org Tables]]
   - [[https://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Emacs org-mode examples and cookbook]]
+</div>
 
 ** General                                                            :emacs:
 
