@@ -1,6 +1,6 @@
 * Emacs / Vim Resources                                              :editor:
 
-** Org-Mode <button data-toggle="collapse" data-target="#org-mode"><img src="/static/down.png" height="16" width="16" /></button> :org_mode:emacs:
+** Org-Mode <button id="arrow-1" data-toggle="collapse" data-target="#org-mode"><img src="/static/down.png" height="16" width="16" onclick="switchArrows('arrow-1');" /></button> :org_mode:emacs:
 
 <div id="org-mode" class="collapse">
   - [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
