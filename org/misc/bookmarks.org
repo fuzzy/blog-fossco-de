@@ -2,7 +2,7 @@
 
 ** Org-Mode <button id="arrow-1" data-toggle="collapse" data-target="#org-mode"><img src="/static/down.png" height="16" width="16" onclick="switchArrows('org-mode', 'arrow-1');" /></button> :org_mode:emacs:
 
-<div id="org-mode" class="collapse">
+<div id="org-mode" style="visibility: visible;" class="collapse">
   - [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
   - [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing Org-mode files to HTML]]
   - [[https://www.emacswiki.org/emacs/org-publish.el][EmacsWiki: org-publish.el]]
