@@ -16,8 +16,11 @@
       function switchArrows(c, s) {
           cobj = document.getElementById(c)
           sobj = document.getElementById(s)
-          console.log(cobj.style.visibility)
-          console.log(sobj.style.visibility)
+          if cobj.style.visibility == "visible" {
+              cobj.src = "/static/up.png"
+          } else {
+              cobj.src = "/static/down.png"
+          }
       }
     </script>
     <style>
