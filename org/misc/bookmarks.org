@@ -1,38 +1,36 @@
 * Emacs / Vim Resources                                              :editor:
 
-** Emacs                                                              :emacs:                                            
+** Org-Mode                                                  :org_mode:emacs:
 
-*** Org-Mode                                                       :org_mode:
+  - [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
+  - [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing Org-mode files to HTML]]
+  - [[https://www.emacswiki.org/emacs/org-publish.el][EmacsWiki: org-publish.el]]
+  - [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]]
+  - [[http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html][How I use Emacs and Org-mode to implement GTD]]
+  - [[https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html][An Agenda for Life With Org Mode]]
+  - [[https://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html][Dig Into Org Mode]]
+  - [[https://orgmode.org/manual/Agenda-views.html][The Org Manual: Agenda views]]
+  - [[https://orgmode.org/manual/Agenda-commands.html][The Org Manual: Agenda commands]]
+  - [[https://orgmode.org/manual/Table-of-contents.html][The Org Manual: Table of contents]]
+  - [[https://orgmode.org/worg/org-color-themes.html][Org Color Themes]]
+  - [[https://orgmode.org/manual/Org_002dPlot.html#Org_002dPlot][The Org Manual: Org-Plot]]
+  - [[https://github.com/theodorewiles/org-mind-map][GitHub - theodorewiles/org-mind-map: This is an emacs package that creates graphviz directed graphs.]]
+  - [[http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-ledger.html][Using Ledger for Accounting in Org-mode with Babel]]
+  - [[https://emacsclub.github.io/html/org_tutorial.html][Org-mode Tutorial / Cheat Sheet]]
+  - [[https://gist.github.com/kinjo/509761][HTML5 Presentation export for Org-mode]]
+  - [[https://docs.google.com/document/d/1Bn4z06zaCPs_Of-PZZ3HScz3fcdC3X2zoAU5VCuhO_Y/edit?hl=en#!][Org-Mode Cheat Sheet - Google Docs]]
+  - [[http://katherine.cox-buday.com/blog/2015/03/14/writing-specs-with-org-mode/][Writing Specs with Org-mode - Katherine Cox-Buday]]
+  - [[http://orgmode.org/manual/CSS-support.html#CSS-support][The Org Manual: CSS support]]
+  - [[https://cestlaz.github.io/post/using-emacs-54-org-tables/][Using Emacs 54 Org Tables]]
+  - [[https://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Emacs org-mode examples and cookbook]]
 
-   - [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
-   - [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing Org-mode files to HTML]]
-   - [[https://www.emacswiki.org/emacs/org-publish.el][EmacsWiki: org-publish.el]]
-   - [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]]
-   - [[http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html][How I use Emacs and Org-mode to implement GTD]]
-   - [[https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html][An Agenda for Life With Org Mode]]
-   - [[https://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html][Dig Into Org Mode]]
-   - [[https://orgmode.org/manual/Agenda-views.html][The Org Manual: Agenda views]]
-   - [[https://orgmode.org/manual/Agenda-commands.html][The Org Manual: Agenda commands]]
-   - [[https://orgmode.org/manual/Table-of-contents.html][The Org Manual: Table of contents]]
-   - [[https://orgmode.org/worg/org-color-themes.html][Org Color Themes]]
-   - [[https://orgmode.org/manual/Org_002dPlot.html#Org_002dPlot][The Org Manual: Org-Plot]]
-   - [[https://github.com/theodorewiles/org-mind-map][GitHub - theodorewiles/org-mind-map: This is an emacs package that creates graphviz directed graphs.]]
-   - [[http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-ledger.html][Using Ledger for Accounting in Org-mode with Babel]]
-   - [[https://emacsclub.github.io/html/org_tutorial.html][Org-mode Tutorial / Cheat Sheet]]
-   - [[https://gist.github.com/kinjo/509761][HTML5 Presentation export for Org-mode]]
-   - [[https://docs.google.com/document/d/1Bn4z06zaCPs_Of-PZZ3HScz3fcdC3X2zoAU5VCuhO_Y/edit?hl=en#!][Org-Mode Cheat Sheet - Google Docs]]
-   - [[http://katherine.cox-buday.com/blog/2015/03/14/writing-specs-with-org-mode/][Writing Specs with Org-mode - Katherine Cox-Buday]]
-   - [[http://orgmode.org/manual/CSS-support.html#CSS-support][The Org Manual: CSS support]]
-   - [[https://cestlaz.github.io/post/using-emacs-54-org-tables/][Using Emacs 54 Org Tables]]
-   - [[https://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Emacs org-mode examples and cookbook]]
+** General                                                            :emacs:
 
-*** General
-
-   - [[https://elpa.gnu.org/packages/archive-contents][https://elpa.gnu.org/packages/archive-contents]]
-   - [[https://johnsogg.github.io/emacs-golang][Set up Emacs for Golang from scratch - December 2016 · jnl]]
-   - [[https://github.com/magit/magit/wiki/Cheatsheet][Cheatsheet · magit/magit Wiki]]
-   - [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff: Like vimdiff for Emacs]]
-   - [[http://plantuml.com/emacs][Integration with Emacs]]
+  - [[https://elpa.gnu.org/packages/archive-contents][https://elpa.gnu.org/packages/archive-contents]]
+  - [[https://johnsogg.github.io/emacs-golang][Set up Emacs for Golang from scratch - December 2016 · jnl]]
+  - [[https://github.com/magit/magit/wiki/Cheatsheet][Cheatsheet · magit/magit Wiki]]
+  - [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff: Like vimdiff for Emacs]]
+  - [[http://plantuml.com/emacs][Integration with Emacs]]
 
 * Hardware Resources
 
