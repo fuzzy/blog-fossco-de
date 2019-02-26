@@ -19,8 +19,10 @@
           console.log(cobj.style.visibility)
           if (cobj.style.visibility == "visible") {
               sobj.src = "/static/up.png";
+              cobj.style.visibility = "hidden";
           } else {
               sobj.src = "/static/down.png";
+              cobj.style.visibility = "visible";
           }
           return
       }
