@@ -37,10 +37,13 @@
   - [[http://plantuml.com/emacs][Integration with Emacs]]
 </div>
 
+* Development
+
 * Hardware Resources
 
-** ARM + Unix/BSD/Linux OS                                              :nix:
+**** ARM + Unix/BSD/Linux OS <button id="button-3" data-toggle="collapse" data-target="#hardware-arm"><img src="/static/down.png" id="arrow-3" height="16" width="16" onclick="SwitchArrows('hardware-arm', 'arrow-3');" /></button> :arm:
 
+<div style="visibility: visible;" id="hardware-arm" class="collapse">
  - [[https://github.com/jasperla/openbsd-rockpro64][GitHub - jasperla/openbsd-rockpro64: OpenBSD/arm64 on PINE64 RockPro64]]
  - [[https://blog.marryto.me/drone-ci-build/][基于Gitea+Drone搭建自己的CI/CD平台 - Koya's Blog]]
  - [[https://www.linuxjournal.com/content/hacking-safe-bash][Hacking a Safe with Bash | Linux Journal]]
@@ -121,3 +124,4 @@
  - [[https://wa-renton.intouchreceipting.com/][TouchBase Signin]]
  - [[http://quakecatcher.net/sensor/home.php][Quake-Catcher Network Sensor Monitoring - Your account]]
  - [[https://www.youtube.com/watch?v=cIuX87Xo8Fc][(34) Poor Man's UML / Emacs Artist Mode and Ditaa Demo - YouTube]]
+</dev>
