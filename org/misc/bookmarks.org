@@ -1,6 +1,6 @@
 * Emacs Resources                                              :editor:
 
-** Org-Mode <button id="button-1" data-toggle="collapse" data-target="#org-mode"><img src="/static/down.png" id="arrow-1" height="16" width="16" onclick="SwitchArrows('org-mode', 'arrow-1');" /></button> :org_mode:emacs:
+**** Org-Mode <button id="button-1" data-toggle="collapse" data-target="#org-mode"><img src="/static/down.png" id="arrow-1" height="16" width="16" onclick="SwitchArrows('org-mode', 'arrow-1');" /></button> :org_mode:emacs:
 
 <div style="visibility: visible;" id="org-mode" class="collapse">
   - [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
@@ -27,7 +27,7 @@
 </div>
 
 
-** General <button id="button-2" data-toggle="collapse" data-target="#emacs-general"><img src="/static/down.png" id="arrow-2" height="16" width="16" onclick="SwitchArrows('emacs-general', 'arroow-2');" /></button> :emacs:
+**** General <button id="button-2" data-toggle="collapse" data-target="#emacs-general"><img src="/static/down.png" id="arrow-2" height="16" width="16" onclick="SwitchArrows('emacs-general', 'arroow-2');" /></button> :emacs:
 
 <div style="visibility: visible;" id="emacs-general" class="collapse">
   - [[https://elpa.gnu.org/packages/archive-contents][https://elpa.gnu.org/packages/archive-contents]]
