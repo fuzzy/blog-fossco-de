@@ -27,9 +27,9 @@
 </div>
 
 
-**** General <button id="button-2" data-toggle="collapse" data-target="#emacs-general"><img src="/static/down.png" id="arrow-2" height="16" width="16" onclick="SwitchArrows('emacs-general', 'arroow-2');" /></button> :emacs:
+**** General <button id="button-2" onclick="SwitchArrows('emacs-general', 'arrow-2')"><img src="/static/down.png" id="arrow-2" height="16" width="16"/></button> :emacs:
 
-<div style="visibility: visible;" id="emacs-general" class="collapse">
+<div style="display: none;" id="emacs-general">
   - [[https://elpa.gnu.org/packages/archive-contents][https://elpa.gnu.org/packages/archive-contents]]
   - [[https://johnsogg.github.io/emacs-golang][Set up Emacs for Golang from scratch - December 2016 · jnl]]
   - [[https://github.com/magit/magit/wiki/Cheatsheet][Cheatsheet · magit/magit Wiki]]
@@ -41,9 +41,9 @@
 
 * Hardware Resources
 
-**** ARM + Unix/BSD/Linux OS <button id="button-3" data-toggle="collapse" data-target="#hardware-arm"><img src="/static/down.png" id="arrow-3" height="16" width="16" onclick="SwitchArrows('hardware-arm', 'arrow-3');" /></button> :arm:
+**** ARM + Unix/BSD/Linux OS <button id="button-3" onclick="SwitchArrows('hardware-arm', 'arrow-3');"><img src="/static/down.png" id="arrow-3" height="16" width="16" /></button> :arm:
 
-<div style="visibility: visible;" id="hardware-arm" class="collapse">
+<div style="display: none;" id="hardware-arm">
  - [[https://github.com/jasperla/openbsd-rockpro64][GitHub - jasperla/openbsd-rockpro64: OpenBSD/arm64 on PINE64 RockPro64]]
  - [[https://blog.marryto.me/drone-ci-build/][基于Gitea+Drone搭建自己的CI/CD平台 - Koya's Blog]]
  - [[https://www.linuxjournal.com/content/hacking-safe-bash][Hacking a Safe with Bash | Linux Journal]]
