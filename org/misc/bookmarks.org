@@ -26,13 +26,16 @@
   - [[https://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Emacs org-mode examples and cookbook]]
 </div>
 
-** General                                                            :emacs:
 
+** General <button id="button-2" data-toggle="collapse" data-target="#emacs-general"><img src="/static/down.png" id="arrow-2" height="16" width="16" onclick="SwitchArrows('emacs-general', 'arroow-2');" /></button> :emacs:
+
+<div style="visibility: visible;" id="emacs-general" class="collapse">
   - [[https://elpa.gnu.org/packages/archive-contents][https://elpa.gnu.org/packages/archive-contents]]
   - [[https://johnsogg.github.io/emacs-golang][Set up Emacs for Golang from scratch - December 2016 · jnl]]
   - [[https://github.com/magit/magit/wiki/Cheatsheet][Cheatsheet · magit/magit Wiki]]
   - [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff: Like vimdiff for Emacs]]
   - [[http://plantuml.com/emacs][Integration with Emacs]]
+</div>
 
 * Hardware Resources
 
