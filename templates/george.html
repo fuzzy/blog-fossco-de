@@ -20,9 +20,11 @@
           if (cobj.style.visibility == "visible") {
               sobj.src = "/static/up.png";
               cobj.style.visibility = "hidden";
+              cobj.style.display = "none";
           } else {
               sobj.src = "/static/down.png";
               cobj.style.visibility = "visible";
+              cobj.style.display = "block";
           }
           return
       }
