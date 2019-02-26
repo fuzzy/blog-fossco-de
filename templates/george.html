@@ -17,13 +17,11 @@
           cobj = document.getElementById(c);
           sobj = document.getElementById(s);
           console.log(cobj.style.visibility)
-          if (cobj.style.visibility == "visible") {
-              sobj.src = "/static/up.png";
-              cobj.style.visibility = "hidden";
+          if (cobj.style.display == "block") {
+              sobj.src = "/static/down.png";
               cobj.style.display = "none";
           } else {
-              sobj.src = "/static/down.png";
-              cobj.style.visibility = "visible";
+              sobj.src = "/static/up.png";
               cobj.style.display = "block";
           }
           return
