@@ -50,7 +50,7 @@ lines of the following:
 
 The first file we need to create would be our initialization, so we'll call that thwap.sh, and since
 we already have an init.d directory, it seems we're well prepared for it. We'll use a naming
-convention of *\<NNN\>-\<NAME\>.sh* for all of our other initialization files.
+convention of *NNN-NAME.sh* for all of our other initialization files.
 
 #+BEGIN_SRC sh
 # Record the platform name
