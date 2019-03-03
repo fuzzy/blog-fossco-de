@@ -47,3 +47,49 @@ lines of the following:
       - OS_NAME (Ex: Linux)
         - ARCH_NAME (Ex: aarch64)
 #+END_EXAMPLE
+
+The first file we need to create would be our initialization, so we'll call that thwap.sh, and since
+we already have an init.d directory, it seems we're well prepared for it. We'll use a naming
+convention of <NNN>-<NAME>.sh for all of our other initialization files.
+
+#+BEGIN_SRC sh
+# Record the platform name
+THWAP_OS=$(uname -s)
+# and the architecture
+THWAP_ARCH=$(uname -m)
+# Set the base
+THWAP_BASE=${HOME}/.thwap
+# Our temp directory
+THWAP_TEMP=${THWAP_HOME}/temp
+# The home for our build scripts
+THWAP_PKGD=${THWAP_BASE}/pkg.d
+# Our configuration directory
+THWAP_CONF=${THWAP_BASE}/etc.d
+# And finally our install roots
+THWAP_LIBR=${THWAP_BASE}/library
+THWAP_HOME=${THWAP_LIBR}/${THWAP_OS}/${THWAP_ARCH}
+
+# Quickly ensure all of our directories are present
+for i in ${THWAP_BASE} ${THWAP_HOME} ${THWAP_LIBR} \
+                       ${THWAP_TEMP} ${THWAP_PKGD}; do
+    test ! -d ${i} && mkdir -p ${i}
+done
+
+# A quick utility function to add a directory to the $PATH environment
+# variable if it is not already present
+add2path() {
+    if test -d ${1} && test -z "$(echo ${PATH}|grep ${1})"; then
+        export PATH=${1}:${PATH}
+    fi
+}
+
+# Before we start up with packages, let's ensure all of our initialization is finished
+for itm in ${THWAP_BASE}/init.d/???-*.sh; do
+    test -f ${itm} && . ${itm}
+done
+
+# Now we can ensure all of our packages are installed the way we want
+for itm in ${THWAP_BASE}/pkg.d/*.sh; do
+    test -f ${itm} && . ${itm}
+done
+#+END_SRC
