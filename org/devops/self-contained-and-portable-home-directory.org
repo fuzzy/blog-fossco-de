@@ -37,7 +37,7 @@ going to go into the meaning behind that at this point, so don't ask. Suffice it
 whatever convention you like. Now, as for the directory structure, I'm thining something along the
 lines of the following:
 
-#+BEGIN_SRC
+#+BEGIN
 - ~/.thwap
   - init.d
   - etc.d
@@ -46,4 +46,4 @@ lines of the following:
   - library
       - OS_NAME (Ex: Linux)
         - ARCH_NAME (Ex: aarch64)
-#+END_SRC
+#+END
