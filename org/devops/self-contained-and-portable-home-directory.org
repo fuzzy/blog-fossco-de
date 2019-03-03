@@ -37,12 +37,13 @@ going to go into the meaning behind that at this point, so don't ask. Suffice it
 whatever convention you like. Now, as for the directory structure, I'm thining something along the
 lines of the following:
 
-+ ~/.thwap
-  + init.d
-  + etc.d
-  + scripts.d
-  + pkg.d
-  + library
-    + OS_NAME (Ex: Linux)
-      + ARCH_NAME (Ex: aarch64)
+***** Directory layout
+  - ~/.thwap
+    - init.d
+    - etc.d
+    - scripts.d
+    - pkg.d
+    - library
+      - OS_NAME (Ex: Linux)
+        - ARCH_NAME (Ex: aarch64)
 
