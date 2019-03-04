@@ -132,6 +132,25 @@ at the totally unpredictable location: ~/.thwap/scripts.d/thwap-rdiff-backup.sh
 
 *** Incrimental backups
 
+Let's start by defining our tunable knobs, I put mine in ~/.thwap/etc.d, so here's
+~/.thwap/etc.d/thwap-rdiff-backup.sh:
+
+#+BEGIN_SRC sh
+# backup directory, remember, a single user can be on many hosts
+# so let's keep things separated nicely.
+THWAP_RDIFF_DIR=/backup/${USER}/rdiff/$(hostname -s)
+
+# And setup our rdiff-backup args
+THWAP_RDIFF_ARGS="--verify -b"
+
+# Finally our retention period.
+# As a note this, should be readable by rdiff-backup as it will
+# be applied directly to the -r option. I've set it to 14 days.
+THWAP_RDIFF_RETENTION="14D"
+#+END_SRC
+
+And then we can put our afore-mentioned script at ~/.thwap/scripts.d/thwap-rdiff-backup.sh:
+
 #+BEGIN_SRC sh
 #!/bin/sh
 
@@ -147,6 +166,12 @@ else
     echo "No configuration found at: ${CONFIG}"
 fi
 #+END_SRC
+
+And finally, we make sure it's executable.
+
+#+BEGIN_EXAMPLE
+$ chmod +x ~/.thwap/scripts.d/thwap-rdiff-backup.sh
+#+END_EXAMPLE
 
 *** Daily snapshots
 
