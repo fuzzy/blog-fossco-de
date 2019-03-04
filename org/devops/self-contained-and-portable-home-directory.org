@@ -95,7 +95,22 @@ done
 #+END_SRC
 
 Now any additions we want to make can go into seperate scripts in ~/.thwap/init.d. We can start with
-our backup scripts. We'll put that in ~/.thwap/init.d/001-backup.sh.
+our backup scripts. We'll put that in ~/.thwap/init.d/001-backup.sh. Before we head down that road
+however let's have a few quick notes about the setup.
+
+Firstly, we create a /backup directory. In my case this is an NFS mount to our secondary NAS. The
+backups are stored on a RAIDZ (RAID5) ZFS array, on a FreeBSD 12-STABLE amd64 machine. Inside
+/backup I have a directory named for my ${USER}, with the permissions set to 0700. So in my case the
+directory looks like this
+
+#+BEGIN_SRC
+$ ls -l /backup
+total 0
+drwx------ 4 fuzzy fuzzy 32 Mar  3 01:14 fuzzy
+#+END_SRC
+
+If you don't setup a /backup directory, you'll need to modify the stuff we outline below to suit
+your particular needs.
 
 #+BEGIN_SRC sh
 alias thwap_rdiff_backup="${HOME}/.thwap/scripts.d/thwap-rdiff-backup.sh"
