@@ -224,3 +224,11 @@ And similarly making sure it is executable.
 $ chmod +x ~/.thwap/scripts.d/thwap-snap-backup.sh
 #+END_EXAMPLE
 
+*** Local installations
+
+I prefer to lock the versions of language runtimes that I develop against, and I've found the
+easiest way to do that, at least in my opinion, is to manage local installations in my home
+directory. Specifically Go, Python, and because of my custom requirements I like to install Emacs
+locally as well, to ensure that I've got a consistent setup/versions across all of my machines. We
+started this setup earlier in our ~/.thwap/init.d/thwap.sh file, at the very end where we look for
+and source in files in ~/.thwap/pkg.d/. So starting there let's get Golang setup.
