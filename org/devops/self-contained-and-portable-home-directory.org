@@ -114,7 +114,7 @@ drwx------ 4 fuzzy fuzzy 32 Mar  3 01:14 fuzzy
 #+END_SRC
 
 If you don't setup a /backup directory, you'll need to modify the stuff we outline below to suit
-your particular needs.
+your particular needs. We'll put this particular bit into ~/.thwap/init.d/001-backup.sh:
 
 #+BEGIN_SRC sh
 alias thwap_rdiff_backup="${HOME}/.thwap/scripts.d/thwap-rdiff-backup.sh"
@@ -127,7 +127,8 @@ thwap_backup() {
 #+END_SRC
 
 Now that's all well and good, but if you don't have the referenced scripts, it doesn't help much. So
-let's go ahead and get those put in place. We'll start with thwap-rdiff-backup.sh
+let's go ahead and get those put in place. We'll start with thwap-rdiff-backup.sh, which we'll put
+at the totally unpredictable location: ~/.thwap/scripts.d/thwap-rdiff-backup.sh
 
 *** Incrimental backups
 
@@ -149,7 +150,8 @@ fi
 
 *** Daily snapshots
 
-And we can follow that up with thwap-snap-backup.sh
+And we can follow that up with thwap-snap-backup.sh which we'll put at:
+~/.thwap/scripts.d/thwap-snap-backup.sh 
 
 #+BEGIN_SRC sh
 #!/bin/sh
