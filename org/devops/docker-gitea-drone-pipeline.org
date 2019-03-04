@@ -1,12 +1,14 @@
-* Assumptions
+* Building a Docker+GiTea+Drone CI Pipeline
+
+** Assumptions
 
 1. You have a spare Linux box. (armhf, aarch64, amd64 and some powerpc versions are supported by docker, YMMV)
 2. You have Debian or Ubuntu installed on said spare Linux box (any distribution should work so long as docker is packaged up, assuming the official sources don't support you)
 3. You can publicly expose ports 80 and 443 at a minimum, you may want another port for SSH
 
-* Define our working environment.
+** Define our working environment.
 
-*** Hardware
+**** Hardware
 
 Whatever spare hardware you have lying around is fine usually. I have setup swarms with ODROID-HC1 machines, also with Rock64 SBCs as well as with more commodity type x86-based hardware, as we'll detail below.
 
@@ -14,13 +16,13 @@ Whatever spare hardware you have lying around is fine usually. I have setup swar
 - Worker: 4x2.5Ghz cores, 8GB RAM
 - Worker: 2.2.5Ghz cores, 8GB RAM
 
-*** Operating System
+**** Operating System
 
 There are many choices one could make here. Some of them better than others, depending on who you ask. I personally have no serious show-stopper issues with Debian or Ubuntu, and as those are arguably the most common distributions, I'll be going that route.
 
 - Master and all worker nodes are running [[https://www.debian.org][Debian GNU/Linux]] stretch with all updates applied as of: Wed Feb  6 07:47:37 PST 2019
 
-*** Software
+**** Software
 
 This is the sticky wicket, versions of popular projects can move extremely quickly. Given that volitile nature, you can experience wildly different results from those seen here if the versions don't line up. To help guard against that possibility I'm listing the versions of the software used in this writing for comparison if you have to track down any issues.
 
@@ -28,9 +30,9 @@ This is the sticky wicket, versions of popular projects can move extremely quick
 - Gitea
 - Drone-CI
 
-* Installing our base
+** Installing our base
 
-*** Docker
+**** Docker
 
 I use the following little shell script to handle the docker installation
 
@@ -66,7 +68,7 @@ ${SUDO} apt update && ${SUDO} apt install -y docker-ce
 
 Note this works for Debian, but won't do you much good for systems like ArchLinux. Most systems that aren't supported by the upstream will have packages though, so not to worry. Arch, Alpine, Gentoo etc all have either binary packages available, or the tools to build your own.
 
-*** Swarm-mode clustering
+**** Swarm-mode clustering
 
 On our primary node we need to setup our cluster master. Docker has made this quite simple:
 
@@ -91,7 +93,7 @@ To add a manager to this swarm, run the following command:
     docker swarm join --token SWMTKN-1-36you72bjisxnx0hvt1z3nyzhph7oprtb8e2n0qxpzt3izb337-9cq4yjr3d7047jqq45tcqxzwr 192.168.2.20:2377
 #+END_SRC
 
-*** Shared filesystems
+**** Shared filesystems
 
 You can use whatever shared filesystem makes sense for your environment, I personally didn't care to spend a ton of time on it since filesystem performance isn't critical in my setup, so I chose NFS which is perfectly workable under a wide variety of workloads (but by no means all). Giving a quick moment to discussing some of the options however can't hurt. GlusterFS is a very workable option, as well one could use AFS, or any of the various shared-filesystems. If you need performance you may consider a heavy client-caching system. For me, NFS does the job well enough I really only have a maximum of 4 users to support on my services, so it's not that big a deal.
 

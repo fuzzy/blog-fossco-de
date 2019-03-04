@@ -1,6 +1,6 @@
 #+AUTHOR: Mike 'Fuzzy' Partin
 
-* A self-contained and portable home directory
+* Building a self-contained and portable home directory
 
 ** Synopsis
 
