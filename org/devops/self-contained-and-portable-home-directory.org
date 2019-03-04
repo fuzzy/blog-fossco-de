@@ -1,7 +1,8 @@
 #+AUTHOR: Mike 'Fuzzy' Partin
-#+TITLE: A self-contained and portable home directory
 
-* Synopsis
+* A self-contained and portable home directory
+
+** Synopsis
 
 I have a *LOT* of machines in my home network. Some are your standard off-the-shelf PC types,
 x86_64(amd64) stuff mainly, although I do have 2 i686 machines (eeePCs displaying monitoring
@@ -14,14 +15,14 @@ setup (install anything I might need, check out my normal repos, setup configura
 have a portable setup that I can cart around either via some mechanism like NFS (or any shared
 network filesystem) or an external drive.
 
-* Goals
+** Goals
 
 1. Create an external drive that contains the home directory setup
 2. Ensure tools are installed in a os/arch agnostic manner
 3. Ensure a consistent toolset across all os/arch combinations
 4. Provide a backup and recovery mechanism
 
-* Tools
+** Tools
 
 1. POSIX sh (we'll be writing all of our automation to the lowest common denominator)
 2. Git (gonna be needing this thing)
@@ -29,7 +30,7 @@ network filesystem) or an external drive.
 4. rdiff-backup for incrimental backups
 5. pxz or pbzip2 for compression of daily snapshots
 
-* Getting started
+** Getting started
 
 First let's decide on a naming convention, and then let's take a look at designing the directory
 structure. For my purposes I'm using the THWAP naming convention, as it's my general one. I'm not
@@ -48,7 +49,7 @@ lines of the following:
         - ARCH_NAME (Ex: aarch64)
 #+END_EXAMPLE
 
-** Initialization
+*** Initialization
 
 The first file we need to create would be our initialization, so we'll call that thwap.sh, and since
 we already have an init.d directory, it seems we're well prepared for it. We'll use a naming
@@ -100,7 +101,7 @@ Now any additions we want to make can go into seperate scripts in ~/.thwap/init.
 our backup scripts. We'll put that in ~/.thwap/init.d/001-backup.sh. Before we head down that road
 however let's have a few quick notes about the setup.
 
-** Backup and Restore
+*** Backup and Restore
 
 Firstly, we create a /backup directory. In my case this is an NFS mount to our secondary NAS. The
 backups are stored on a RAIDZ (RAID5) ZFS array, on a FreeBSD 12-STABLE amd64 machine. Inside
@@ -130,7 +131,7 @@ Now that's all well and good, but if you don't have the referenced scripts, it d
 let's go ahead and get those put in place. We'll start with thwap-rdiff-backup.sh, which we'll put
 at the totally unpredictable location: ~/.thwap/scripts.d/thwap-rdiff-backup.sh
 
-*** Incrimental backups
+**** Incrimental backups
 
 Let's start by defining our tunable knobs, I put mine in ~/.thwap/etc.d, so here's
 ~/.thwap/etc.d/thwap-rdiff-backup.sh:
@@ -173,7 +174,7 @@ And finally, we make sure it's executable.
 $ chmod +x ~/.thwap/scripts.d/thwap-rdiff-backup.sh
 #+END_EXAMPLE
 
-*** Daily snapshots
+**** Daily snapshots
 
 And we can follow that up with thwap-snap-backup.sh which we'll put at:
 ~/.thwap/scripts.d/thwap-snap-backup.sh 
@@ -200,3 +201,4 @@ else
     echo "No configuration found at: ${CONFIG}"
 fi
 #+END_SRC
+
