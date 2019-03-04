@@ -176,6 +176,22 @@ $ chmod +x ~/.thwap/scripts.d/thwap-rdiff-backup.sh
 
 **** Daily snapshots
 
+We'll setup our snapshot backup facility in the same fashion, first by putting our configuration
+files into place: ~/.thwap/etc.d/thwap-snap-backup.sh:
+
+#+BEGIN_SRC sh
+# Thwap backup configuration, start with the base dir
+THWAP_BKUP=/backup/${USER}
+
+# and our tar snapshot stuff
+THWAP_SNAPS=${THWAP_BKUP}/snaps
+THWAP_SNAPS_ARGS="-f- -c ${HOME}/"
+THWAP_SNAPS_COMP="pxz -e -9"
+THWAP_SNAPS_EXT="txz"
+THWAP_SNAPS_HISTORY=5
+THWAP_SNAPS_CURRENT="$(hostname -s)--${USER}--$(date +%s).${THWAP_SNAPS_EXT}"
+#+END_SRC
+
 And we can follow that up with thwap-snap-backup.sh which we'll put at:
 ~/.thwap/scripts.d/thwap-snap-backup.sh 
 
@@ -201,4 +217,10 @@ else
     echo "No configuration found at: ${CONFIG}"
 fi
 #+END_SRC
+
+And similarly making sure it is executable.
+
+#+BEGIN_EXAMPLE
+$ chmod +x ~/.thwap/scripts.d/thwap-snap-backup.sh
+#+END_EXAMPLE
 
