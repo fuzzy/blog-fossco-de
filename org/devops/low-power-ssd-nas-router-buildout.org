@@ -1,12 +1,12 @@
-** RV NAS Buildout
+* Low power SSD based NAS/Router Buildout
 
-*** Stated Design Goals
+** Stated Design Goals
 
 - WiFI AP
 - router
 - NAS
 
-*** Base board
+** Base board
 
 The contenders so far
 
@@ -14,7 +14,7 @@ The contenders so far
 - [[http://www.banana-pi.org/w2.html][bpi-w2]]
 - [[https://www.pine64.org/?page_id=61454][RockPro64]]
 
-*** SATA controllers
+** SATA controllers
 
 Depending on the board we go with
 
@@ -22,11 +22,11 @@ Depending on the board we go with
 - [[https://www.amazon.com/IO-Crest-Controller-Components-SI-MPE40125/dp/B072BD8Z3Y?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-d-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B072BD8Z3Y][4 port mini-pcie]]
 - [[https://www.amazon.com/dp/B01I2WVFLU/ref=sspa_dk_detail_2?psc=1][mini-pcie to pcie]]
 
-*** USB Drive enclosures
+** USB Drive enclosures
 
 - [[https://www.amazon.com/gp/product/B071F613VH/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1][2xM.2 SSD USB-C]]
 
-*** Drives
+** Drives
 
 - [[https://www.amazon.com/dp/B073SBQMCX/?coliid=I2NKSW210Q553Q&colid=28PWQ4GXU5688&psc=0&ref_=lv_ov_lig_dp_it][2.5" SSD - WD Blue 1TB]]
 - [[https://www.amazon.com/dp/B073SB2MXT/?coliid=IBPHKDAKM1MVO&colid=28PWQ4GXU5688&psc=0&ref_=lv_ov_lig_dp_it][M.2 SSD - WD Blue 1TB]]
