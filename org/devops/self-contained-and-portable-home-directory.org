@@ -48,6 +48,8 @@ lines of the following:
         - ARCH_NAME (Ex: aarch64)
 #+END_EXAMPLE
 
+** Initialization
+
 The first file we need to create would be our initialization, so we'll call that thwap.sh, and since
 we already have an init.d directory, it seems we're well prepared for it. We'll use a naming
 convention of *NNN-NAME.sh* for all of our other initialization files.
@@ -98,6 +100,8 @@ Now any additions we want to make can go into seperate scripts in ~/.thwap/init.
 our backup scripts. We'll put that in ~/.thwap/init.d/001-backup.sh. Before we head down that road
 however let's have a few quick notes about the setup.
 
+** Backup and Restore
+
 Firstly, we create a /backup directory. In my case this is an NFS mount to our secondary NAS. The
 backups are stored on a RAIDZ (RAID5) ZFS array, on a FreeBSD 12-STABLE amd64 machine. Inside
 /backup I have a directory named for my ${USER}, with the permissions set to 0700. So in my case the
@@ -125,6 +129,8 @@ thwap_backup() {
 Now that's all well and good, but if you don't have the referenced scripts, it doesn't help much. So
 let's go ahead and get those put in place. We'll start with thwap-rdiff-backup.sh
 
+*** Incrimental backups
+
 #+BEGIN_SRC sh
 #!/bin/sh
 
@@ -140,6 +146,8 @@ else
     echo "No configuration found at: ${CONFIG}"
 fi
 #+END_SRC
+
+*** Daily snapshots
 
 And we can follow that up with thwap-snap-backup.sh
 
