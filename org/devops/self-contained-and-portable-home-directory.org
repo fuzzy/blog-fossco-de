@@ -233,8 +233,9 @@ locally as well, to ensure that I've got a consistent setup/versions across all 
 started this setup earlier in our ~/.thwap/init.d/thwap.sh file, at the very end where we look for
 and source in files in ~/.thwap/pkg.d/. So starting there let's get Golang setup.
 
-#+BEGIN_SRC sh
+**** Golang
 
+#+BEGIN_SRC sh
 vers=1.10.8
 tball=go${vers}.src.tar.gz
 url=https://dl.google.com/go/${tball}
@@ -277,3 +278,77 @@ for pkg in golang.org/x/tools/cmd/... \
     go get ${pkg}
 done
 #+END_SRC
+
+**** Python
+
+As well I do alot of work in Python, both in 2.X and 3.X code-bases. I keep both of them installed,
+and have a chpy function to switch between branches as needed. I generally like to keep the same set
+of tools installed for both branches if possible, so I've included a mechanism for that. Here is my
+~/.thwap/pkg.d/20-python.sh:
+
+#+BEGIN_SRC sh
+case "$(uname -s)" in
+    (FreeBSD)
+        tmake=$(which gmake)
+        PROC_CPU="/compat/linux/proc/cpuinfo"
+        ;;
+    (Linux)
+        tmake=$(which make)
+        PROC_CPU="/proc/cpuinfo"
+        ;;
+esac
+
+build_py() {
+    if test ! -x ${THWAP_HOME}/python/${pyvers}/bin/${pyexec}; then
+        cd ${THWAP_TEMP}
+        wget ${url}
+        tar -Jxf ${tball}
+        cd Python-${pyvers}
+        ./configure --prefix=${THWAP_HOME}/python/${pyvers} ${build_args} && \
+            ${tmake} -j$(grep rocess ${PROC_CPU}|wc -l) && \
+            make install && cd ../ && rm -rf Python-${pyvers}*
+        pymajor=$(echo ${pyvers}|awk -F. '{print $1}')
+        ln -sf ${THWAP_HOME}/python/${pyvers} ${THWAP_HOME}/python/${pymajor}
+        cd
+    fi
+}
+
+chpy() {
+    PYDFLT=${THWAP_HOME}/python/default
+    case "${1}" in
+        (2) PYTARG=${THWAP_HOME}/python/2   ;;
+        (3) PYTARG=${THWAP_HOME}/python/3   ;;
+        (*) PYTARG=${THWAP_HOME}/python/3   ;; # default
+    esac
+    rm -f ${PYDFLT}
+    ln -sf ${PYTARG} ${PYDFLT}
+    PYPATH=${PYDFLT}/bin
+    add2path ${PYPATH}
+}
+
+# Python 3.x setup
+pyexec=python3
+pyvers=3.7.2
+tball=Python-${pyvers}.tar.xz
+url="https://www.python.org/ftp/python/${pyvers}/${tball}"
+build_args="--with-ensurepip=upgrade"
+
+build_py && chpy 3 && pip3 install --upgrade -r ${THWAP_PKGD}/py3-requirements.txt >/dev/null 2>&1
+
+# Python 2.x setup
+pyexec=python
+pyvers=2.7.15
+tball=Python-${pyvers}.tar.xz
+url="https://www.python.org/ftp/python/${pyvers}/${tball}"
+build_args="--with-ensurepip=upgrade --with-signal-module --with-fpectl --with-threads"
+
+build_py && chpy 2 && pip install --upgrade -r ${THWAP_PKGD}/py2-requirements.txt >/dev/null 2>&1
+
+# default to 3.x
+
+chpy 3
+#+END_SRC
+
+Now a quick note here, unless you have packages that don't exist for say, Python 2.X, you can have a
+single py2-requirements.txt and symlink it to py3-requirements.txt until such time as you need to
+keep the lists seperate.
