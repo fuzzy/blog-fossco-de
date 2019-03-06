@@ -1,13 +1,4 @@
 * Blogs                                                             :elfeed:
-
-*** Daily
-
-| URI                                   | Name                              | Description (optional)                         |
-|---------------------------------------+-----------------------------------+------------------------------------------------|
-| [[http://xkcd.com/rss.xml]]               | XKCD                              | Daily comic strip, math and other nerdy stuff. |
-| [[https://www.smbc-comics.com/comic/rss]] | Saturday Morning Breakfast Cereal | Online comic strip                             |
-
-
 *** daily                                                             :daily:
 **** [[http://xkcd.com/rss.xml]]                                           :xkcd:
 **** [[https://www.smbc-comics.com/comic/rss]]                             :smbc:
