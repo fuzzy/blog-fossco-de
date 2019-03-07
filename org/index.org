@@ -1,3 +1,6 @@
+#+title: FOSS Code
+#+author: Mike 'Fuzzy' Partin
+
 ** What you'll find here
 
 Little rants and ramblings about the stuff I play with. Should be a smattering of [[https://www.gnu.org/software/emacs][Emacs]], [[https://golang.org][Golang]], and

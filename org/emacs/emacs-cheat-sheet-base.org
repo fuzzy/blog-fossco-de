@@ -1,3 +1,6 @@
+#+title: Emacs (stock) Cheat Sheet
+#+author: Mike 'Fuzzy' Partin
+
 ** General
 
 *** File / Buffer Operations

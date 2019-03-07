@@ -1,3 +1,5 @@
+#+title: Emacs Cheat Sheet
+#+author: Mike 'Fuzzy' Partin
 #+STARTUP: align shrink
 
 * Emacs Cheat Sheets

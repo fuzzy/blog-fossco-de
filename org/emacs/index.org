@@ -1,3 +1,6 @@
+#+title: Emacs Stuff
+#+author: Mike 'Fuzzy' Partin
+
 * Emacs articles
 
 I may repost some other articles here from outside sources from time to time. I can't cover everything, and this gives me a way to collect the stuff I have found useful into a single place. Mostly though I hope to be filling this with original content.
