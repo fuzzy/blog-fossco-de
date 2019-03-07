@@ -1,3 +1,6 @@
+#+title: DevOps Stuff
+#+author: Mike 'Fuzzy' Partin
+
 ** DevOpsy type stuff
 **** TODO [[/org/devops/docker-gitea-drone-pipeline.org.org][Docker+Gitea+Drone-CI Pipeline]]
 **** TODO [[/org/devops/low-power-ssd-nas-router-buildout.org.org][Low power SSD based NAS/Router buildout]]

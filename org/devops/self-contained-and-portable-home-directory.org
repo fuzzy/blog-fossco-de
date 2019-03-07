@@ -1,7 +1,6 @@
-#+AUTHOR: Mike 'Fuzzy' Partin
-#+OPTIONS: toc:nil
+#+title: Building a self-contained and portable home directory
+#+author: Mike 'Fuzzy' Partin
 
-#+TOC: headlines 2
 * Building a self-contained and portable home directory
 
 ** Synopsis

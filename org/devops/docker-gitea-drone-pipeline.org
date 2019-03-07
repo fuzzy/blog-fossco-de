@@ -1,3 +1,6 @@
+#+title: Building a Docker+GiTea+DroneCI Pipeline
+#+author: Mike 'Fuzzy' Partin
+
 * Building a Docker+GiTea+Drone CI Pipeline
 
 ** Assumptions

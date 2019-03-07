@@ -1,3 +1,6 @@
+#+title: Low power SSD based NAS/Router Buildout
+#+author: Mike 'Fuzzy' Partin
+
 * Low power SSD based NAS/Router Buildout
 
 ** Stated Design Goals
