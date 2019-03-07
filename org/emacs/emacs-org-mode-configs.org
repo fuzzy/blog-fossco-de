@@ -1,3 +1,6 @@
+#+title: T.H.W.A.P. Emacs: Org-Mode
+#+author: Mike 'Fuzzy' Partin
+
 * Org-mode configuration
 
 When we left off in part #01 of our series, we had defined a framework for adding "layers" to our configuration. As well, we had defined two layers, a "base" and a "rss" layer, and setup the configurations. I'm assuming you have read the first part of the series, so I'm going to continue building on that base config that we built.

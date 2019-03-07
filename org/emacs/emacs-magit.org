@@ -1,3 +1,6 @@
+#+title: T.H.W.A.P. Emacs: MaGit
+#+author: Mike 'Fuzzy' Partin
+
 * Emacs Git Integration
 
 We'll be using Magit, and let me tell you, I have barely scratched the surface of the functionality Magit has, and it is already the greatest thing since the invention of inventions.

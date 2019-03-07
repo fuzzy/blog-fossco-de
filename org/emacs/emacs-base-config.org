@@ -1,3 +1,6 @@
+#+title: T.H.W.A.P. Emacs: Base Config
+#+author: Mike 'Fuzzy' Partin
+
 * My base emacs config
 
 Hey, how's it going? Yep, it's another of those "my emacs setup" articles! Joy right? Well let's get on with it then. Firstly, I decided that I liked to keep my imports, and my configuration seperate, for maintainability mostly. Given that, let's dive right in, with a look at the base directory layout:

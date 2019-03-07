@@ -1,3 +1,6 @@
+#+title: TRAMP Usage notes
+#+author: Mike 'Fuzzy' Partin
+
 * TRAMP usage notes
 
 Editing a remote file is easy:
