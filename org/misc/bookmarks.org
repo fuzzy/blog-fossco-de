@@ -1,3 +1,6 @@
+#+title: Work-In-Progress Bookmarks
+#+author: Mike 'Fuzzy' Partin
+
 * Emacs Resources                                              :editor:
 
 **** Org-Mode <button id="button-1" onclick="SwitchArrows('org-mode', 'arrow-1');"><img src="/static/down.png" id="arrow-1" height="16" width="16"/></button> :org_mode:emacs:

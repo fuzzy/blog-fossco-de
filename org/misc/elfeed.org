@@ -1,3 +1,6 @@
+#+title: Work-In-Progress: Elfeed configuration
+#+author: Mike 'Fuzzy' Partin
+
 * Blogs                                                             :elfeed:
 *** daily                                                             :daily:
 **** [[http://xkcd.com/rss.xml]]                                           :xkcd:
