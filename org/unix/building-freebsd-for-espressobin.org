@@ -7,7 +7,7 @@ start but we've chosen to use FreeBSD, and so things just got even simpler! We h
 crochet. [[https://github.com/theasylum/crochet.git][Crochet]], specifically is the repo we're using, the upstream is available [[https://github.com/freebsd/crochet][here]]. Crochet
 makes building our image a snap, so given that, here we go for fun and profit!
 
-*** First let's go ahead and build our cross compilers
+*** First let's go ahead and prep our system
 
 I'll assume you don't have any of the sources, so let's go ahead and set that up. There are many
 many ways to do this, svn, git, etc. I'm writing this on a FreeBSD 12-CURRENT machine, on
