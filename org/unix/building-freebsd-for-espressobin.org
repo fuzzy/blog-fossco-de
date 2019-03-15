@@ -25,5 +25,22 @@ compilation, so let's do that:
 
 #+BEGIN_SRC sh
 cd /usr/src
-env TARGET=arm64 TARGET_ARCH=aarch64 make -j`sysctl hw.ncpu | awk '{print $2}'` xdev
+env TARGET=arm64 TARGET_ARCH=aarch64 make -DNO_CLEAN -j`sysctl hw.ncpu | awk '{print $2}'` xdev
 #+END_SRC
+
+And just to keep things nice and clean, let's go ahead and create a new home for our crochet
+builds. I use ZFS personally, so adjust to suit your needs and setup of course. Once we create our
+home, we'll want to check out our crochet repo and get to building
+
+#+BEGIN_SRC sh
+zfs create -o mountpoint=/usr/crochet zpool/crochet
+cd /usr/crochet
+git clone https://github.com/theasylum/crochet.git
+cd crochet
+cp config.sh.sample espressobin.sh
+#+END_SRC
+
+Now we're going to pause here, and take a moment to fix up our espressobin.sh. At a minimum we need
+only specify the board (in our case: ESPRESSObin) but, I like to seed the system with enough to make
+it useful off the bat. Namely ports and the src that the system was built from. So let's get those
+changes made to the config before we kick things off.
