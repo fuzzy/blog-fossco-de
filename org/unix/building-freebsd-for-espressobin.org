@@ -25,7 +25,7 @@ compilation, so let's do that:
 
 #+BEGIN_SRC sh
 cd /usr/src
-env TARGET=arm64 TARGET_ARCH=aarch64 make -DNO_CLEAN -j`sysctl hw.ncpu | awk '{print $2}'` xdev
+env TARGET=arm64 TARGET_ARCH=aarch64 make -DNO_CLEAN -j`sysctl hw.ncpu | awk '{print $2}'` toolchain
 #+END_SRC
 
 And just to keep things nice and clean, let's go ahead and create a new home for our crochet
