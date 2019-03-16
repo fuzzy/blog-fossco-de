@@ -50,7 +50,6 @@ board_setup ESPRESSObin
 option ImageSize 8092mb
 option Growfs
 option Email user@domain.tld
-option GzipImage
 option User fuzzy # password will be same as the username
 option SwapFile 128mb deferred
 option UsrPorts
@@ -60,5 +59,28 @@ FREEBSD_INSTALL_WORLD=y
 WORLDJOBS="`sysctl hw.ncpu|awk '{print $2}'`"
 KERNJOBS="`sysctl hw.ncpu|awk '{print $2}'`"
 FREEBSD_EXTRA_ARGS="-DNO_CLEAN"
-
 #+END_SRC
+
+Now, we are obviously not doing anything interesting with this. We could go into the board overlay
+and add configuration files, we can initialize the pkg manager and install other packages via the
+config file. All kinds of other things, read through config.sh-sample in the crochet checkout for
+more information. For now we'll skip on to building our image which is suitable to log into and
+start configuring for whatever purpose. If this is enough for you, neat.
+
+#+BEGIN_SRC sh
+sudo ./crochet.sh -c espressobin.sh -v
+#+END_SRC
+
+That's it. That if it finishes properly, will result in an image named something like:
+
+#+BEGIN
+FreeBSD-aarch64-12-GENERIC-ESPRESSObin.img
+#+END
+
+Which you can then write to an sd card like:
+
+#+BEGIN_SRC sh
+sudo dd if=FreeBSD-aarch64-12-GENERIC-ESPRESSObin.img bs=1m of=/dev/da0 # <- change that to match your system
+#+END_SRC
+
+And voila!
