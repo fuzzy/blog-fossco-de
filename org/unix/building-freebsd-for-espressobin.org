@@ -34,6 +34,15 @@ home, we'll want to check out our crochet repo and get to building
 
 #+BEGIN_SRC sh
 zfs create -o mountpoint=/usr/crochet zpool/crochet
+#+END_SRC
+
+*** Now let's get Crochet set up
+
+Easy enough, it's a very simple procedure, which is outlined in greated detail in the README so I
+won't go into it here. This article is a quick how I did it, not a deep-dive. That being said, do
+this:
+
+#+BEGIN_SRC sh
 cd /usr/crochet
 git clone https://github.com/theasylum/crochet.git
 cd crochet
