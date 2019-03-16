@@ -70,6 +70,8 @@ KERNJOBS="`sysctl hw.ncpu|awk '{print $2}'`"
 FREEBSD_EXTRA_ARGS="-DNO_CLEAN"
 #+END_SRC
 
+*** Do the thing!
+
 Now, we are obviously not doing anything interesting with this. We could go into the board overlay
 and add configuration files, we can initialize the pkg manager and install other packages via the
 config file. All kinds of other things, read through config.sh-sample in the crochet checkout for
