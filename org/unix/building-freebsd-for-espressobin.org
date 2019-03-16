@@ -44,3 +44,21 @@ Now we're going to pause here, and take a moment to fix up our espressobin.sh. A
 only specify the board (in our case: ESPRESSObin) but, I like to seed the system with enough to make
 it useful off the bat. Namely ports and the src that the system was built from. So let's get those
 changes made to the config before we kick things off.
+
+#+BEGIN_SRC sh
+board_setup ESPRESSObin
+option ImageSize 8092mb
+option Growfs
+option Email user@domain.tld
+option GzipImage
+option User fuzzy # password will be same as the username
+option SwapFile 128mb deferred
+option UsrPorts
+option UsrSrc
+option Ntpd
+FREEBSD_INSTALL_WORLD=y
+WORLDJOBS="`sysctl hw.ncpu|awk '{print $2}'`"
+KERNJOBS="`sysctl hw.ncpu|awk '{print $2}'`"
+FREEBSD_EXTRA_ARGS="-DNO_CLEAN"
+
+#+END_SRC
