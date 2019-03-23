@@ -5,7 +5,26 @@
 
 We're going to build a 16 core cross-compiling DistCC compiler farm on arm64 for fun and profit!
 Well, ok, mostly fun. Let's start by running over the hardware that we've chosen for this process,
-and some of the hardware we could have used. I'll try to be breif.
+and some of the hardware we could have used. I'll try to be breif, so I won't belabor the reader
+with descriptions of the boards. I'll just include the links for further reading should one desire.
+
+What I will do is quickly go over what is important for us to consider when looking at one of these
+boards for usage in our compile farm.
+
+- # of cores
+- Amount of RAM
+- Speed of storage (this is much less important for the farm than one might think)
+
+Given that, obviously the more ram, and the more cores, the better off we are. The reason I give the
+note about storage speed, is that the temp space used by DistCC can be put on an exported file share
+over the network via any of the numerous available systems such as NFS, SMB, Gluster, etc. The
+network in general will be faster than any disk bottlenecks, and the server side of the file store
+can be a RAMDISK if so desired. Given the options available, I'm sure you can see why it's not as
+big a consideration as one might think. 
+
+Ok, so with that out of the way, let's get down to the hardware I went with. Note that this list is
+not in any way cannonical and you can use whatever hardware you like. The installation mechanism I
+use should be portable across just about any board you like.
 
 *** What I used
 
