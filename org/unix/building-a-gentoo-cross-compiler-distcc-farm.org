@@ -3,6 +3,8 @@
 
 * Building a cross-compiling DistCC farm
 
+** Notes on hardware
+
 We're going to build a 16 core cross-compiling DistCC compiler farm on arm64 for fun and profit!
 Well, ok, mostly fun. Let's start by running over the hardware that we've chosen for this process,
 and some of the hardware we could have used. I'll try to be breif, so I won't belabor the reader
@@ -11,9 +13,9 @@ with descriptions of the boards. I'll just include the links for further reading
 What I will do is quickly go over what is important for us to consider when looking at one of these
 boards for usage in our compile farm.
 
-- # of cores
-- Amount of RAM
-- Speed of storage (this is much less important for the farm than one might think)
+- *# of cores*
+- *Amount of RAM*
+- *Speed of storage* (this is much less important for the farm than one might think)
 
 Given that, obviously the more ram, and the more cores, the better off we are. The reason I give the
 note about storage speed, is that the temp space used by DistCC can be put on an exported file share
@@ -29,6 +31,7 @@ use should be portable across just about any board you like.
 *** What I used
 
 - [[https://www.pine64.org/?page_id=7147][Rock64]] board with 4GB RAM, 4 ARMv8 cores
+- [[https://wiki.odroid.com/odroid-xu4/odroid-xu4][Odroid-XU4]] board with 2GB RAM, 8 ARMv7 cores, 32GB SSD via USB3
 
 *** What I have used before
 
@@ -38,3 +41,29 @@ use should be portable across just about any board you like.
 
 - [[https://www.hardkernel.com/blog-2/odroid-n2/][Odroid N2]] board with 4GB RAM, 6 ARMv8 cores
 - [[https://www.pine64.org/?page_id=61454][RockPro64]] board with 4GB RAM, 6 ARMv8 cores
+
+** Notes on software
+
+The best support for these boards is under Linux at the moment, and that's absolutely fine. I'm more
+of a *BSD fan, but that's neither here nor there for the purposes of this article as we're going to
+be building out a [[https://www.gentoo.org][Gentoo GNU/Linux]] based compile farm. With a fallback "dual-boot" solution. Neat!
+
+We'll start by grabbing [[https://www.debian.org][Debian GNU/Linux]] images from the [[https://www.armbian.com][Armbian]] project for both of our boards:
+
+- [[https://dl.armbian.com/rock64/Debian_stretch_default.7z][Rock64 Debian Stretch]]
+- [[https://dl.armbian.com/odroidxu4/Debian_stretch_next.7z][Odroid XU4 Debian Stretch]]
+
+And if we like, we can go ahead and grab local copies of the latest stage3 tarballs from our
+favorite Gentoo mirror: (It's my favorite, ymmv. Note: I'm including only links to the directories,
+you should grab the latest available dated tarball.)
+
+- [[http://ftp.osuosl.org/pub/gentoo/releases/arm/autobuilds/current-stage3-armv7a_hardfp/][arm32 stage3]]
+- [[http://ftp.osuosl.org/pub/gentoo/experimental/arm64/][arm64 stage3]]
+
+** Justification, or Answering "Why for you do that?"
+
+There are several great reasons for doing this. Let's start with 
+
+- because I could
+- because I wanted to
+- because I thought it was clever and no one stopped me
