@@ -62,8 +62,44 @@ you should grab the latest available dated tarball.)
 
 ** Justification, or Answering "Why for you do that?"
 
-There are several great reasons for doing this. Let's start with 
+There are several good reasons for doing this. Let's start with: 
 
 - because I could
 - because I wanted to
 - because I thought it was clever and no one stopped me
+
+Ok, with those out of the way, let's get to the great reasons:
+
+- Gentoo makes building and maintaining cross compilers easy ([[https://wiki.gentoo.org/wiki/Crossdev][crossdev]])
+- Gentoo is really well designed to be a distributed team player
+
+As we go on with this article, I'll expound more on what I mean by a distributed team player. That's
+the hook, see? Get you to keep reading by promising to explain the gibberish I spout further on. I
+learned that from a marketing self-help book that I saw while standing in line at the grocery
+checkout counter.
+
+** Designing our cluster
+
+** Installing our master
+*** Booting Armbian
+*** Prepping the system
+*** Installing Gentoo
+*** Configuring the basic stuff
+*** Configure the NFS shares
+*** Configure DistCC
+*** Configure CCache
+*** Configure Portage
+*** Finalize the installation
+
+** Installing our first arm64 DistCC node
+*** Booting Armbian
+*** Prepping the system
+*** Installing Gentoo
+*** Configuring the basic stuff
+*** Configure the NFS shares
+*** Configure DistCC
+*** Configure CCache
+*** Configure Portage
+*** Finalize the installation
+
+** Using the cluster 
