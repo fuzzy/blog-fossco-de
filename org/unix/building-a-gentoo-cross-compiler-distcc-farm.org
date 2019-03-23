@@ -28,16 +28,16 @@ Ok, so with that out of the way, let's get down to the hardware I went with. Not
 not in any way cannonical and you can use whatever hardware you like. The installation mechanism I
 use should be portable across just about any board you like.
 
-*** What I used
+**** What I used
 
 - [[https://www.pine64.org/?page_id=7147][Rock64]] board with 4GB RAM, 4 ARMv8 cores
 - [[https://wiki.odroid.com/odroid-xu4/odroid-xu4][Odroid-XU4]] board with 2GB RAM, 8 ARMv7 cores, 32GB SSD via USB3
 
-*** What I have used before
+**** What I have used before
 
 - [[https://wiki.odroid.com/odroid-xu4/odroid-xu4][Odroid-XU4]] board with 2GB RAM, 8 ARMv7 cores
 
-*** What I would like to use in the next iteration
+**** What I would like to use in the next iteration
 
 - [[https://www.hardkernel.com/blog-2/odroid-n2/][Odroid N2]] board with 4GB RAM, 6 ARMv8 cores
 - [[https://www.pine64.org/?page_id=61454][RockPro64]] board with 4GB RAM, 6 ARMv8 cores
