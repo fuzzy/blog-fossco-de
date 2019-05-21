@@ -1,6 +1,16 @@
 #+title: FOSS Code
 #+author: Mike 'Fuzzy' Partin
 
+#+BEGIN_SRC
+.########..#######...######...######...######...#######......########..########
+.##.......##.....##.##....##.##....##.##....##.##.....##.....##.....##.##......
+.##.......##.....##.##.......##.......##.......##.....##.....##.....##.##......
+.######...##.....##..######...######..##.......##.....##.....##.....##.######..
+.##.......##.....##.......##.......##.##.......##.....##.....##.....##.##......
+.##.......##.....##.##....##.##....##.##....##.##.....##.###.##.....##.##......
+.##........#######...######...######...######...#######..###.########..########
+#+END_SRC
+
 ** What you'll find here
 
 Little rants and ramblings about the stuff I play with. Should be a smattering of [[https://www.gnu.org/software/emacs][Emacs]], [[https://golang.org][Golang]], and
@@ -11,8 +21,8 @@ bookmarks]].
 
 ** Maybe a little encouragement
 
-****** TODO Write up a full description of Emacs configuration (In Progress)
-****** TODO Write up an installation and usage guide for GoOrgEous George
-****** TODO Write up an installation and usage guide for TranSwarm
-****** TODO Document SaltStack configurations for controlling Docker Swarms and Kubernetes
+***** TODO Write up a full description of Emacs configuration (In Progress)
+***** TODO Write up an installation and usage guide for GoOrgEous George
+***** TODO Write up an installation and usage guide for TranSwarm
+***** TODO Document SaltStack configurations for controlling Docker Swarms and Kubernetes
 
