@@ -3,9 +3,8 @@
 
 * Emacs Resources                                              :editor:
 
-**** Org-Mode <button id="button-1" onclick="SwitchArrows('org-mode', 'arrow-1');"><img src="/static/down.png" id="arrow-1" height="16" width="16"/></button> :org_mode:emacs:
+**** Org-Mode :org_mode:emacs:
 
-<div style="display: none;" id="org-mode">
   - [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
   - [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing Org-mode files to HTML]]
   - [[https://www.emacswiki.org/emacs/org-publish.el][EmacsWiki: org-publish.el]]
@@ -27,26 +26,21 @@
   - [[http://orgmode.org/manual/CSS-support.html#CSS-support][The Org Manual: CSS support]]
   - [[https://cestlaz.github.io/post/using-emacs-54-org-tables/][Using Emacs 54 Org Tables]]
   - [[https://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Emacs org-mode examples and cookbook]]
-</div>
 
+**** General :emacs:
 
-**** General <button id="button-2" onclick="SwitchArrows('emacs-general', 'arrow-2')"><img src="/static/down.png" id="arrow-2" height="16" width="16"/></button> :emacs:
-
-<div style="display: none;" id="emacs-general">
   - [[https://elpa.gnu.org/packages/archive-contents][https://elpa.gnu.org/packages/archive-contents]]
   - [[https://johnsogg.github.io/emacs-golang][Set up Emacs for Golang from scratch - December 2016 · jnl]]
   - [[https://github.com/magit/magit/wiki/Cheatsheet][Cheatsheet · magit/magit Wiki]]
   - [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff: Like vimdiff for Emacs]]
   - [[http://plantuml.com/emacs][Integration with Emacs]]
-</div>
 
 * Development
 
 * Hardware Resources
 
-**** ARM + Unix/BSD/Linux OS <button id="button-3" onclick="SwitchArrows('hardware-arm', 'arrow-3');"><img src="/static/down.png" id="arrow-3" height="16" width="16" /></button> :arm:
+**** ARM + Unix/BSD/Linux OS :arm:
 
-<div style="display: none;" id="hardware-arm">
  - [[https://github.com/jasperla/openbsd-rockpro64][GitHub - jasperla/openbsd-rockpro64: OpenBSD/arm64 on PINE64 RockPro64]]
  - [[https://blog.marryto.me/drone-ci-build/][基于Gitea+Drone搭建自己的CI/CD平台 - Koya's Blog]]
  - [[https://www.linuxjournal.com/content/hacking-safe-bash][Hacking a Safe with Bash | Linux Journal]]
@@ -122,9 +116,9 @@
  - [[http://www.nintendo.com/super-nes-classic][Super Nintendo Entertainment System™: Super NES Classic Edition – Official site]]
  - [[https://www.jeffgeerling.com/blogs/jeff-geerling/controlling-pwr-act-leds-raspberry-pi][Controlling PWR and ACT LEDs on the Raspberry Pi | Jeff Geerling]]
  - [[https://magazine.odroid.com/article/linux-gaming-mobile-entertainment-system/][Linux Gaming: Mobile Entertainment System | ODROID Magazine]]
- - [[https://wiki.odroid.com/odroid-c1/os_images/android/android][odroid-c1:os_images:android:android [ODROID Wiki]]]
+ - [[https://wiki.odroid.com/odroid-c1/os_images/android/android][odroid-c1:os_images:android:android ODROID Wiki]]
  - [[https://tleyden.github.io/blog/2014/05/22/configure-emacs-as-a-go-editor-from-scratch/][Configure Emacs as a Go editor from scratch - Seven Story Rabbit Hole]]
  - [[https://wa-renton.intouchreceipting.com/][TouchBase Signin]]
  - [[http://quakecatcher.net/sensor/home.php][Quake-Catcher Network Sensor Monitoring - Your account]]
  - [[https://www.youtube.com/watch?v=cIuX87Xo8Fc][(34) Poor Man's UML / Emacs Artist Mode and Ditaa Demo - YouTube]]
-</dev>
+
