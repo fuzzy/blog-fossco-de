@@ -3,7 +3,7 @@
 
 * FOSSco.de
 
-** What you'll find here
+*** What you'll find here
 
 Little rants and ramblings about the stuff I play with. Should be a smattering of [[https://www.gnu.org/software/emacs][Emacs]], [[https://golang.org][Golang]], and
 [[https://www.python.org][Python]] articles, with some fun DevOps type stuff thrown in every now and then. I'll try my best not
@@ -11,7 +11,7 @@ to get into much in the way of politics, except where issues affect technology. 
 bored, here's a list of various blogs and such that I read that I find fun/useful: [[/org/misc/elfeed.org.org][RSS Feeds]] also [[/org/misc/bookmarks.org.org][My
 bookmarks]].
 
-** Maybe a little encouragement
+*** Maybe a little encouragement
 
 ***** TODO Write up a full description of Emacs configuration (In Progress)
 ***** TODO Write up an installation and usage guide for GoOrgEous George
