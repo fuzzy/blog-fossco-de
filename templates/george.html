@@ -1,6 +1,25 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.6.6/dist/terminal.min.css" />
+    <link rel="stylesheet" href="/static/railscasts.css">
+    <script src="/static/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+
+      function SwitchArrows(c, s) {
+          cobj = document.getElementById(c);
+          sobj = document.getElementById(s);
+          console.log(cobj.style.visibility)
+          if (cobj.style.display == "block") {
+              sobj.src = "/static/down.png";
+              cobj.style.display = "none";
+          } else {
+              sobj.src = "/static/up.png";
+              cobj.style.display = "block";
+          }
+          return
+      }
+    </script>
   </head>
   <body class="hack dark">
     <div class="standard">

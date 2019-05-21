@@ -1,0 +1,95 @@
+body {
+    background-color: #585858;
+    color: #afafaf;
+}
+a:link, a:visited {
+    text-decoration: underline;
+    color: #fff;
+}
+table {
+    width: 100%;
+    padding-bottom: 0.25em;
+    box-shadow: 1px 1px 4px black;
+}
+td {
+    padding: 0.25em;
+}
+th {
+    padding-left: 0.25em;
+    background-color: #AAA;
+    text-decoration: underline;
+    color: #000000;
+}
+tr:nth-child(even) {
+    background-color: #777;
+    color: #f2f2f2
+}
+tr {
+    border-bottom: 1px solid #999999;
+}
+h1 { color: #fff; }
+h2 { color: #fff; }
+h3 { color: #fff; }
+h4 { color: #fff; }
+h5 { color: #fff; }
+hr {
+    border: 1px dotted black;
+}
+.todo {
+    font-weight: bold;
+}
+
+.TODO {
+    color: red;
+}
+
+.DONE {
+    color: green;
+}
+.tags {
+    padding: 0.25em 0.55em 0.25em 0.55em;
+    background-color: #afafaf;
+    color: #000;
+    font-size: x-small;
+    border-radius: 10px;
+}
+li.menu {
+    background-position: 8px 5px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    padding-left: 28px;
+}
+.banner {
+    color: #000000;
+}
+.fossco-logo {
+    background-image: url('/static/blog.fossco.de.svg');
+}
+.github-logo {
+    background-image: url('/static/github-128.png');
+}
+.gitlab-logo {
+    background-image: url('/static/gitlab-128.png');
+}
+.gitea-logo {
+    background-image: url('/static/gitea.png');
+}
+.emacs-logo {
+    background-image: url('/static/Emacs-icon.png');
+}
+.tools-logo {
+    background-image: url('/static/tools-1024.png');
+}
+.footer {
+    width: 100%;
+    bottom: 0px;
+}
+.mydropdown {
+    background-color: #ccc;
+}
+.navmenu {
+    background-color: #9c9c9c;
+    color: #000;
+}
+.navmenu a:link a:visited { color: #000; }
+
