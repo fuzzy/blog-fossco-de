@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{.Title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/railscasts.css">
+    <script src="/static/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+
+      function SwitchArrows(c, s) {
+          cobj = document.getElementById(c);
+          sobj = document.getElementById(s);
+          console.log(cobj.style.visibility)
+          if (cobj.style.display == "block") {
+              sobj.src = "/static/down.png";
+              cobj.style.display = "none";
+          } else {
+              sobj.src = "/static/up.png";
+              cobj.style.display = "block";
+          }
+          return
+      }
+    </script>
+    <style>
+      body {
+          background-color: #585858;
+          color: #afafaf;
+      }
+      a:link, a:visited {
+          text-decoration: underline;
+          color: #fff;
+      }
+      table {
+          width: 100%;
+          padding-bottom: 0.25em;
+          box-shadow: 1px 1px 4px black;
+      }
+      td {
+          padding: 0.25em;
+      }
+      th {
+          padding-left: 0.25em;
+          background-color: #AAA;
+          text-decoration: underline;
+          color: #000000;
+      }
+      tr:nth-child(even) {
+          background-color: #777;
+          color: #f2f2f2
+      }
+      tr {
+          border-bottom: 1px solid #999999;
+      }
+      h1 { color: #fff; }
+      h2 { color: #fff; }
+      h3 { color: #fff; }
+      h4 { color: #fff; }
+      h5 { color: #fff; }
+      hr {
+          border: 1px dotted black;
+      }
+      .todo {
+          font-weight: bold;
+      }
+
+      .TODO {
+          color: red;
+      }
+
+      .DONE {
+          color: green;
+      }
+      .tags {
+          padding: 0.25em 0.55em 0.25em 0.55em;
+          background-color: #afafaf;
+          color: #000;
+          font-size: x-small;
+          border-radius: 10px;
+      }
+      li.menu {
+          background-position: 8px 5px;
+          background-size: 16px;
+          background-repeat: no-repeat;
+          padding-left: 28px;
+      }
+      .banner {
+          color: #000000;
+      }
+      .fossco-logo {
+          background-image: url('/static/blog.fossco.de.svg');
+      }
+      .github-logo {
+          background-image: url('/static/github-128.png');
+      }
+      .gitlab-logo {
+          background-image: url('/static/gitlab-128.png');
+      }
+      .gitea-logo {
+          background-image: url('/static/gitea.png');
+      }
+      .emacs-logo {
+          background-image: url('/static/Emacs-icon.png');
+      }
+      .tools-logo {
+          background-image: url('/static/tools-1024.png');
+      }
+      .footer {
+          width: 100%;
+          bottom: 0px;
+      }
+      .mydropdown {
+          background-color: #ccc;
+      }
+      .navmenu {
+          background-color: #9c9c9c;
+          color: #000;
+      }
+      .navmenu a:link a:visited { color: #000; }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron banner">
+      <div style="padding-left:2em;">
+        <img style="float:left;" src="/static/blog.fossco.de.svg" width="75px" height="75px">
+        <h1>FOSSCo.de</h1>
+        <p>Adventures in Free, Open Source Software</p>
+        <nav class="navbar navbar-default navmenu" style="float:left;">
+          <div class="container-fluid">
+            <div class="navbar-header banner">
+              <a class="navbar-brand banner" href="#">FOSSCo.de</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="https://github.com/fuzzy/" title="GitHub">
+                  <img src="/static/github-128.png" width="26px" height="26px">
+                </a>
+              </li>
+              <!-- <li class="menu gitlab-logo"><a href="#">gitlab.com/</a></li> -->
+              <li>
+                <a href="https://git.devfu.net/fuzzy/" title="DevFu.net">
+                  <img src="/static/gitea.png" width="26px" height="26px">
+                </a>
+              </li>
+              <li style="border-right: 1px solid black;">&nbsp;</li>
+              <li>
+                <a href="/" title="Home">
+                  <img src="/static/blog.fossco.de.svg" width="26px" height="26px">
+                </a>
+              </li>
+              <li>
+                <a href="/org/python/index.org" title="Python development">
+                  <img src="/static/python-512.png" width="26px" height="26px">
+                </a>
+              </li>
+              <li>
+                <a href="/org/golang/index.org" title="GoLang development">
+                  <img src="/static/golang-512.png" width="26px" height="26px">
+                </a>
+              </li>
+              <li>
+                <a href="/org/emacs/index.org" title="Emacs stuff">
+                  <img src="/static/Emacs-icon.png" width="26px" height="26px">
+                </a>
+              </li>
+              <li>
+                <a href="/org/devops/index.org" title="DevOps stuff">
+                  <img src="/static/tools-1024.png" width="26px" height="26px">
+                </a>
+              </li>
+              <li>
+                <a href="/org/unix/index.org" title="*NIX stuff">
+                  <img src="/static/unix.png" width="26px" height="26px">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      {{.Payload}}
+    </div>
+    <div class="footer">
+      <hr />
+      <center>
+        <p style="width: 75%;font-size: .65em;">
+          Content and opinions, herein expressed, are owned by Mike 'Fuzzy' Partin, any attempts
+          to subvert, copy, maim, claim credit for, make love to, or consume any content will be
+          met with bemusement, various desultory and giggly insults, and finally, casual indifference.
+          Also of note, any code or commands given here come with no warranty or guarantee, neither
+          expressed nor implied. Usage of any of said content may result in damage to your computer,
+          personal vehicles, domiciles, or planet. Your family members may be adversely affected.
+          You have been warned.
+        </p>
+        <p style="width: 75%;font-size: .85em;">
+          Last edited by {{.Author}} @ {{.LastModified}}
+        </p>
+      </center>
+    </div>
+  </body>
+</html>
