@@ -36,11 +36,11 @@ hr {
 }
 
 .TODO {
-    color: red;
+    color: #a72e2e;
 }
 
 .DONE {
-    color: green;
+    color: #2ea75c;
 }
 .tags {
     padding: 0.25em 0.55em 0.25em 0.55em;
