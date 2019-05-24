@@ -7,16 +7,16 @@ I may repost some other articles here from outside sources from time to time. I 
 
 ** Extras
 
-**** [[/org/emacs/emacs-cheat-sheet.org.org][Emacs Cheat Sheets]]
+**** DONE [[/org/emacs/emacs-cheat-sheet.org.org][Emacs Cheat Sheets]]
 
 ** General configurations
 
-**** [[/org/emacs/emacs-base-config.org.org][Base Emacs configuration]] *(Part 1)*
-**** [[/org/emacs/emacs-magit.org.org][Magit integration]] *(Part 2)*
+**** DONE [[/org/emacs/emacs-base-config.org.org][Base Emacs configuration]] *(Part 1)*
+**** DONE [[/org/emacs/emacs-magit.org.org][Magit integration]] *(Part 2)*
 
 ** Org-Mode configurations
 
-**** [[/org/emacs/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 3)*
+**** DONE [[/org/emacs/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 3)*
 
 ** Development configurations
 
