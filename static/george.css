@@ -2,7 +2,10 @@ body {
     background-color: #292929;
     color: #c9c9c9;
 }
-
+em {
+    color: #c9c9c9;
+    font-weight: bold;
+}
 table {
     width: 100%;
     padding-bottom: 0.25em;
