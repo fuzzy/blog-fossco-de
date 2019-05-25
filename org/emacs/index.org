@@ -11,23 +11,23 @@ I may repost some other articles here from outside sources from time to time. I 
 
 ** General configurations
 
-**** DONE [[/org/emacs/emacs-base-config.org.org][Base Emacs configuration]] *(Part 1)*
-**** DONE [[/org/emacs/emacs-magit.org.org][Magit integration]] *(Part 2)*
+**** DONE [[/org/emacs/emacs-base-config.org.org][Base Emacs configuration]]
+**** DONE [[/org/emacs/emacs-magit.org.org][Magit integration]]
 
 ** Org-Mode configurations
 
-**** DONE [[/org/emacs/emacs-org-mode-configs.org.org][Base Org-mode configs]] *(Part 3)*
+**** DONE [[/org/emacs/emacs-org-mode-configs.org.org][Base Org-mode configs]]
 
 ** Development configurations
 
-**** TODO Python development with Emacs *(Part 4)*
-**** TODO Golang development with Emacs *(Part 5)*
+**** TODO Python development with Emacs
+**** TODO Golang development with Emacs
 
 ** DevOps configurations
 
-**** TODO Ansible development *(Part 6)*
-**** TODO Working with Docker containers *(Part 7)*
-**** TODO Working with SaltStack *(Part 8)*
+**** TODO Ansible development
+**** TODO Working with Docker containers
+**** TODO Working with SaltStack
 
 ** Emacs workflow examples
 
@@ -35,3 +35,4 @@ I may repost some other articles here from outside sources from time to time. I 
 **** TODO Generating diagrams with org-mindmap
 **** TODO Generating more complex diagrams with ditaa and artist-mode
 **** TODO Generating complex and flashy diagrams with PlantUML and org-mode
+**** TODO Publishing web content with org-mode and GoOrgEous George
