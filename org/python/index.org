@@ -1,0 +1,4 @@
+* abused - A basic USE editor for Portage based systems (Gentoo, etc)
+
+Abused is an inline USE flag editor, which supports peristence of all configured use flags. See the
+[[https://github.com/fuzzy/abused][GitHub]] page for a nice gif in the readme for an example.
