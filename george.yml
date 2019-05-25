@@ -1,0 +1,15 @@
+---
+interface: 0.0.0.0
+port: 8080
+
+git:
+  repo: git@git.devfu.net:fuzzy/blog-fossco-de.git
+  webhook: false
+  
+content:
+  base_dir: /data
+  org_dir: org
+  static_dir: static
+  template:
+    name: george 
+    dir: templates
